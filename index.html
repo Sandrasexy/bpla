@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бесплатное обучение на оператора БПЛА — Центр БПЛА «СВОин»</title>
+  <meta name="description" content="Бесплатное обучение на оператора БПЛА. Единовременная выплата до 4 400 000 руб. Гарантированное подписание контракта с МО РФ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #0a1628;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy: #0a1628;
+      --navy2: #0d1f3c;
+      --navy3: #112347;
+      --gold: #c9a227;
+      --gold2: #e8bc34;
+      --red: #c0392b;
+      --red2: #e74c3c;
+      --white: #ffffff;
+      --gray: #8fa3c1;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-red {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--red2), var(--red));
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(231,76,60,0.4);
+    }
+    .btn-red:hover {
+      background: linear-gradient(135deg, var(--red), #a93226);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231,76,60,0.6);
+    }
+    .btn-gold {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      color: #0a1628;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 32px;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(201,162,39,0.4);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201,162,39,0.6);
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-title span { color: var(--gold2); }
+    .section-subtitle {
+      text-align: center;
+      color: var(--gray);
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .gold-line {
+      width: 60px;
+      height: 3px;
+      background: var(--gold2);
+      margin: 10px auto 30px;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 22, 40, 0.97);
+      border-bottom: 2px solid var(--gold);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .site-header.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #0a1628;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .logo-text small {
+      display: block;
+      font-size: 11px;
+      color: var(--gold2);
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .header-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #ccc;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .header-nav a:hover { color: var(--gold2); }
+    .header-contacts {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-phone {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold2);
+    }
+    .header-phone small {
+      display: block;
+      font-size: 11px;
+      color: var(--gray);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(to right, rgba(10,22,40,0.92) 55%, rgba(10,22,40,0.5) 100%),
+        url('https://images.unsplash.com/photo-1601280163022-7f5c6c3a8e27?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 60px;
+    }
+    .hero-content {
+      max-width: 640px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 700;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-title .accent { color: var(--gold2); }
+    .hero-title .main-word {
+      font-size: clamp(42px, 6vw, 72px);
+      color: #fff;
+    }
+    .hero-salary {
+      margin: 20px 0 30px;
+    }
+    .hero-salary .row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .hero-salary .label {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .hero-salary .amount {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--gold2);
+    }
+    .hero-salary .suffix {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .hero-note {
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 10px;
+      margin-top: -15px;
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .hero-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+    .hero-guarantee::before {
+      content: '✓';
+      color: var(--gold2);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* ===== URGENCY BAR ===== */
+    .urgency-bar {
+      background: linear-gradient(90deg, #1a0a0a, #2a0d0d, #1a0a0a);
+      border-top: 1px solid rgba(192,57,43,0.4);
+      border-bottom: 1px solid rgba(192,57,43,0.4);
+      padding: 14px 0;
+    }
+    .urgency-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .urgency-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+    .urgency-highlight {
+      color: var(--red2);
+      font-size: 20px;
+    }
+    .urgency-pulse {
+      width: 10px;
+      height: 10px;
+      background: var(--red2);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    /* ===== ADVANTAGES ===== */
+    .advantages {
+      padding: 70px 0;
+      background: var(--navy2);
+    }
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .adv-card {
+      background: linear-gradient(145deg, #112347, #0d1b3c);
+      border: 1px solid rgba(201,162,39,0.2);
+      border-radius: 8px;
+      padding: 28px 22px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .adv-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+    }
+    .adv-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(201,162,39,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .adv-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .adv-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--gold2);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .adv-desc {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="header-logo">
+      <div class="logo-icon">БПЛА</div>
+      <div class="logo-text">
+        Центр БПЛА <span style="color:var(--gold2)">«СВОин»</span>
+        <small>Официальный учебный центр</small>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#advantages">Преимущества</a>
+      <a href="#requirements">Требования</a>
+      <a href="#program">Программа</a>
+      <a href="#payments">Выплаты</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-contacts">
+      <div class="header-phone">
+        <a href="tel:+79600002576">8 960 000-25-76</a>
+        <small>Бесплатная консультация</small>
+      </div>
+      <a href="#form" class="btn-red" style="padding:10px 20px;font-size:13px;">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">Официальный учебный центр МО РФ</div>
+      <h1 class="hero-title">
+        <span class="accent">Бесплатное</span><br>
+        <span class="main-word">Обучение</span><br>
+        на оператора <span class="accent">БПЛА</span>
+      </h1>
+      <div class="hero-salary">
+        <div class="row">
+          <span class="label">выплата в первый год</span>
+          <span class="amount">от 10 000 000 <span style="font-size:20px">руб.</span></span>
+        </div>
+        <div class="row">
+          <span class="label">до</span>
+          <span class="amount">4 710 000 <span style="font-size:20px">руб.</span></span>
+        </div>
+        <p class="hero-note">за первый месяц после подписания контракта</p>
+      </div>
+      <div class="hero-cta">
+        <a href="#form" class="btn-red" style="font-size:18px;padding:16px 44px;">ХОЧУ В БПЛА</a>
+      </div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;">
+        <div class="hero-guarantee">Бесплатное обучение — без вложений с вашей стороны</div>
+        <div class="hero-guarantee">Гарантированный контракт с МО РФ</div>
+        <div class="hero-guarantee">Сертификат оператора БПЛА после обучения</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCY BAR ===== -->
+<div class="urgency-bar">
+  <div class="urgency-inner">
+    <div class="urgency-pulse"></div>
+    <div class="urgency-text">
+      ОСТАЛОСЬ <span class="urgency-highlight">8 ИЗ 20</span> СВОБОДНЫХ МЕСТ — УСПЕЙТЕ ЗАНЯТЬ СВОЁ!
+    </div>
+    <a href="#form" class="btn-red" style="padding:10px 24px;font-size:14px;">ЗАНЯТЬ МЕСТО</a>
+  </div>
+</div>
+
+<!-- ===== ADVANTAGES ===== -->
+<section class="advantages" id="advantages">
+  <div class="container">
+    <h2 class="section-title">Преимущества обучения в Центре БПЛА <span>«СВОин»</span></h2>
+    <div class="gold-line"></div>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <span class="adv-icon">🎓</span>
+        <div class="adv-title">Бесплатное обучение</div>
+        <div class="adv-desc">Полностью бесплатный курс подготовки оператора БПЛА от 7 до 15 часов практики</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">📋</span>
+        <div class="adv-title">Профессия с нуля</div>
+        <div class="adv-desc">Обучим с нуля — не нужно иметь специального образования или опыта</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🤝</span>
+        <div class="adv-title">Приём и гарантия</div>
+        <div class="adv-desc">Гарантированное подписание контракта с Министерством Обороны РФ</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">📜</span>
+        <div class="adv-title">Сертификация</div>
+        <div class="adv-desc">Сертификат оператора БПЛА государственного образца после прохождения курса</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">💰</span>
+        <div class="adv-title">Гарантия подписания контракта</div>
+        <div class="adv-desc">Единовременная выплата до 4 400 000 руб. сразу после подписания контракта</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🛡️</span>
+        <div class="adv-title">Гарантия устройства на службу</div>
+        <div class="adv-desc">100% трудоустройство. Денежное довольствие от 210 000 руб. в месяц</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JS: STICKY HEADER ===== -->
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+</body>
+</html>
