@@ -426,9 +426,181 @@ input,select,textarea{font-family:inherit}
 .prog-num{font-family:'Oswald',sans-serif;font-size:42px;font-weight:700;color:var(--gold2);line-height:1}
 </style>
 
+<!-- ВЫПЛАТЫ -->
+<section class="sec" style="background:#102040" id="pay">
+  <div class="wrap">
+    <h2 class="sec-h">Дополнительные <span>единовременные выплаты</span></h2>
+    <div class="gold-sep"></div>
+    <div class="pay-tabs">
+      <button class="pt active" onclick="ptab(this)">Все выплаты</button>
+      <button class="pt" onclick="ptab(this)">Единовременная</button>
+      <button class="pt" onclick="ptab(this)">Ежемесячная</button>
+      <button class="pt" onclick="ptab(this)">Дополнительно</button>
+    </div>
+    <div class="pay-list">
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>До 4 400 000 руб.</strong> — единовременная выплата при подписании контракта. Выплачивается в течение 30 дней.</div><div class="pi-sum">4 400 000 ₽</div></div>
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>До 200 000 руб./мес.</strong> — выплата участника СВО. Ежемесячная надбавка за участие в СВО.</div><div class="pi-sum">200 000 ₽</div></div>
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>До 3 500 000 руб.</strong> — жилищная субсидия. Единовременная после 10 лет службы.</div><div class="pi-sum">3 500 000 ₽</div></div>
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>Надбавка за боевые заслуги</strong> и государственные награды. До 200% к окладу.</div><div class="pi-sum">до 200%</div></div>
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>Льготы для семьи:</strong> образование детей, медицина, санаторно-курортное лечение — бесплатно.</div><div class="pi-sum">бесплатно</div></div>
+      <div class="pi"><div class="pi-dot"></div><div class="pi-body"><strong>Страхование жизни и здоровья</strong> — до 3 000 000 руб. Государственное обязательное страхование.</div><div class="pi-sum">3 000 000 ₽</div></div>
+    </div>
+    <div style="text-align:center;margin-top:28px"><a href="#form" class="btn-red">ХОЧУ УЗНАТЬ ВСЕ ВЫПЛАТЫ</a></div>
+  </div>
+</section>
+
+<!-- ФЕДЕРАЛЬНАЯ ПОДДЕРЖКА -->
+<section class="sec" style="background:#0d1b3e" id="fed">
+  <div class="wrap">
+    <h2 class="sec-h">Дополнительная <span>Федеральная поддержка</span></h2>
+    <div class="gold-sep"></div>
+    <div class="acc-list">
+      <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q"><span class="acc-ico">🏥</span><strong>Бесплатная медицинская помощь</strong><span class="acc-arr">›</span></div><div class="acc-a">Военнослужащий и члены его семьи получают полный спектр медицинской помощи в военных госпиталях бесплатно.</div></div>
+      <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q"><span class="acc-ico">🎓</span><strong>Образование и переквалификация</strong><span class="acc-arr">›</span></div><div class="acc-a">Бесплатное профессиональное образование и переквалификация за счёт государства.</div></div>
+      <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q"><span class="acc-ico">🏡</span><strong>ИЖС — собственный дом</strong><span class="acc-arr">›</span></div><div class="acc-a">Участие в государственной программе индивидуального жилищного строительства для военнослужащих.</div></div>
+      <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q"><span class="acc-ico">📦</span><strong>Обеспечение и снаряжение</strong><span class="acc-arr">›</span></div><div class="acc-a">Полное государственное обеспечение: форма, питание, снаряжение, техника — всё за счёт государства.</div></div>
+      <div class="acc" onclick="this.classList.toggle('open')"><div class="acc-q"><span class="acc-ico">✈️</span><strong>Авиабилеты</strong><span class="acc-arr">›</span></div><div class="acc-a">Бесплатный проезд к месту службы и обратно в отпуск для военнослужащего и семьи.</div></div>
+    </div>
+    <div style="text-align:center;margin-top:28px"><a href="#form" class="btn-red">ХОЧУ В БПЛА</a></div>
+  </div>
+</section>
+
+<!-- ПУТИН -->
+<section class="sec" style="background:#08112a;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="putin-wrap">
+      <div class="putin-l">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Vladimir_Putin_%282023%29.jpg/400px-Vladimir_Putin_%282023%29.jpg" alt="В.В. Путин" style="border-radius:6px;border:2px solid var(--gold);width:200px" onerror="this.style.display='none'"/>
+        <div style="font-family:'Oswald',sans-serif;font-size:14px;color:var(--gold2);margin-top:10px;text-align:center">Владимир Владимирович Путин</div>
+        <div style="font-size:11px;color:var(--gray);text-align:center">Президент Российской Федерации</div>
+      </div>
+      <div class="putin-r">
+        <div style="font-size:72px;color:var(--gold);line-height:.5;font-family:Georgia,serif;margin-bottom:18px">"</div>
+        <p style="font-size:15px;color:#ccd;line-height:1.8;font-style:italic">Операторы беспилотных летательных аппаратов — одна из самых важных воинских специальностей в современной армии. Государство полностью обеспечивает подготовку и достойное денежное довольствие каждого военнослужащего.</p>
+        <p style="font-size:15px;color:#ccd;line-height:1.8;font-style:italic;margin-top:14px">Россия заботится о тех, кто защищает её интересы. Каждый контрактник получает весь объём социальных гарантий, предусмотренных федеральным законодательством.</p>
+        <div style="margin-top:20px;font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;color:var(--gold2)">— В.В. Путин</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- СЕРТИФИКАТ -->
+<section class="sec" style="background:#0d1b3e" id="cert">
+  <div class="wrap">
+    <h2 class="sec-h"><span>Сертификат</span></h2>
+    <div class="gold-sep"></div>
+    <p style="text-align:center;color:var(--gray);font-size:14px;margin-bottom:28px">Сертификат оператора выдаётся учреждением БПЛА подготовки обучения</p>
+    <div class="cert-wrap">
+      <div class="cert-doc">
+        <div style="font-size:9px;letter-spacing:2px;font-weight:700;color:#1a1a2e;margin-bottom:8px">РОССИЙСКАЯ ФЕДЕРАЦИЯ</div>
+        <div style="font-size:38px;margin-bottom:6px">⭐</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;border-bottom:2px solid var(--gold);padding-bottom:6px;margin-bottom:6px;color:#1a1a2e">СЕРТИФИКАТ</div>
+        <div style="font-size:10px;color:#333;margin-bottom:14px">Оператора Беспилотного Летательного Аппарата</div>
+        <div style="font-size:11px;color:#333;line-height:1.7">Настоящий сертификат подтверждает, что<br><strong>___________________________</strong><br>прошёл полный курс подготовки оператора БПЛА</div>
+        <div style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(0,0,0,.15);display:flex;justify-content:space-between;font-size:9px;color:#555"><span>Центр БПЛА «СВОин»</span><span>МО РФ · Россия</span></div>
+        <div style="position:absolute;bottom:14px;right:12px;width:50px;height:50px;border:3px solid rgba(180,30,20,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:rgba(180,30,20,.45);transform:rotate(-15deg)">МО РФ</div>
+      </div>
+      <div class="cert-info">
+        <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--gold2);margin-bottom:18px">Документ государственного образца</h3>
+        <ul class="cert-ul">
+          <li><span>✓</span>Признаётся всеми силовыми ведомствами РФ</li>
+          <li><span>✓</span>Подтверждает квалификацию оператора БПЛА</li>
+          <li><span>✓</span>Выдаётся после успешного экзамена</li>
+          <li><span>✓</span>Бессрочный — действует на весь период службы</li>
+        </ul>
+        <a href="#form" class="btn-gold" style="margin-top:24px;display:inline-block">ПОЛУЧИТЬ СЕРТИФИКАТ БЕСПЛАТНО</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПАРТНЁРЫ -->
+<section class="sec" style="background:#102040" id="partners">
+  <div class="wrap">
+    <h2 class="sec-h">Наши <span>партнёры!</span></h2>
+    <div class="gold-sep"></div>
+    <div class="prow">
+      <div class="pcard"><div class="plogo" style="background:#1a3a7a">⭐<small>МО РФ</small></div><div class="pname">Министерство обороны РФ</div></div>
+      <div class="pcard"><div class="plogo" style="background:#8b1a1a">🛡️<small>РОСГВАРДИЯ</small></div><div class="pname">Росгвардия</div></div>
+      <div class="pcard"><div class="plogo" style="background:#1a3a7a">🏛️<small>ФСБ</small></div><div class="pname">ФСБ России</div></div>
+      <div class="pcard"><div class="plogo" style="background:#1a6b1a">🏅<small>ДОСААФ</small></div><div class="pname">ДОСААФ России</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="background:#1255c0" id="faq">
+  <div class="wrap">
+    <h2 class="sec-h" style="color:#fff">Часто задаваемые <span style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4)">вопросы</span></h2>
+    <div class="gold-sep" style="background:rgba(255,255,255,.5)"></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Сколько стоит обучение на оператора БПЛА?<span class="faq-arr">›</span></button><div class="faq-a"><p>Обучение полностью <strong>бесплатное</strong>. Все расходы берёт на себя государство.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Нужен ли опыт управления БПЛА или военная подготовка?<span class="faq-arr">›</span></button><div class="faq-a"><p>Нет. Обучаем с нуля. Достаточно быть гражданином РФ и пройти медкомиссию.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Принимают ли БПЛА в ближайшее время?<span class="faq-arr">›</span></button><div class="faq-a"><p>Набор ведётся постоянно. Места ограничены — не более 20 в группе. Оставьте заявку сейчас.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Когда выплачивается единовременная выплата?<span class="faq-arr">›</span></button><div class="faq-a"><p>Единовременная выплата до 4 400 000 руб. поступает в течение 30 дней после подписания контракта.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Можно ли пройти обучение в своём регионе?<span class="faq-arr">›</span></button><div class="faq-a"><p>Да. Учебные центры есть в большинстве регионов России.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Что будет с семьёй во время службы?<span class="faq-arr">›</span></button><div class="faq-a"><p>Семья получает полный социальный пакет: бесплатная медицина, льготный проезд, санаторное лечение.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ВЫПЛАТЫ */
+.pay-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+.pt{background:transparent;border:1px solid rgba(212,168,32,.35);color:var(--gray);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:7px 16px;border-radius:3px;transition:all .2s}
+.pt.active,.pt:hover{background:var(--gold2);border-color:var(--gold2);color:#0d1b3e;font-weight:700}
+.pay-list{display:flex;flex-direction:column;gap:8px}
+.pi{display:flex;align-items:center;gap:12px;background:#0d1b3e;border:1px solid var(--border);border-left:4px solid var(--gold2);border-radius:4px;padding:14px 16px;transition:transform .2s}
+.pi:hover{transform:translateX(3px)}
+.pi-dot{width:8px;height:8px;border-radius:50%;background:var(--gold2);flex-shrink:0}
+.pi-body{flex:1;font-size:13px;color:#ccd;line-height:1.5}.pi-body strong{color:#fff}
+.pi-sum{font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;color:var(--gold2);white-space:nowrap;flex-shrink:0}
+/* АККОРДЕОН */
+.acc-list{display:flex;flex-direction:column;gap:6px;max-width:860px;margin:0 auto}
+.acc{background:#102040;border:1px solid var(--border);border-radius:5px;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.acc:hover{border-color:var(--gold2)}
+.acc-q{display:flex;align-items:center;gap:12px;padding:15px 16px}
+.acc-ico{font-size:20px;flex-shrink:0}
+.acc-q strong{flex:1;font-size:14px;color:#fff}
+.acc-arr{font-size:20px;color:var(--gold2);transition:transform .3s;flex-shrink:0}
+.acc.open .acc-arr{transform:rotate(90deg)}
+.acc-a{max-height:0;overflow:hidden;font-size:13px;color:var(--gray);line-height:1.65;transition:max-height .35s,padding .3s;background:rgba(0,0,0,.2)}
+.acc.open .acc-a{max-height:100px;padding:12px 16px}
+/* ПУТИН */
+.putin-wrap{display:flex;gap:44px;align-items:flex-start}
+@media(max-width:768px){.putin-wrap{flex-direction:column;align-items:center}}
+.putin-l{flex-shrink:0;text-align:center}
+/* СЕРТИФИКАТ */
+.cert-wrap{display:flex;gap:44px;align-items:center;justify-content:center}
+@media(max-width:768px){.cert-wrap{flex-direction:column}}
+.cert-doc{width:248px;min-height:320px;flex-shrink:0;background:linear-gradient(155deg,#f5f0df,#e6d8a8);border:4px solid var(--gold);border-radius:6px;padding:18px 14px;color:#111;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.6);position:relative}
+.cert-ul{display:flex;flex-direction:column;gap:12px}
+.cert-ul li{display:flex;gap:10px;font-size:14px;color:#ccd;line-height:1.5;align-items:flex-start}
+.cert-ul li span{color:var(--gold2);font-weight:700;font-size:16px;flex-shrink:0}
+/* ПАРТНЁРЫ */
+.prow{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.pcard{text-align:center;width:140px}
+.plogo{width:88px;height:88px;border-radius:50%;border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:22px;margin:0 auto 10px}
+.plogo small{font-size:8px;letter-spacing:1px;font-weight:700;margin-top:2px}
+.pname{font-size:11px;color:var(--gray);line-height:1.4}
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:6px;max-width:920px;margin:0 auto}
+.faq-item{border:1px solid rgba(255,255,255,.2);border-radius:5px;overflow:hidden}
+.faq-q{width:100%;background:rgba(255,255,255,.1);color:#fff;font-size:14px;font-weight:500;text-align:left;padding:15px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s}
+.faq-q:hover,.faq-q.open{background:rgba(255,255,255,.18)}
+.faq-arr{font-size:20px;transition:transform .3s;flex-shrink:0;color:rgba(255,255,255,.7)}
+.faq-q.open .faq-arr{transform:rotate(90deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;background:rgba(0,0,0,.2)}
+.faq-a.open{max-height:180px;padding:14px 17px}
+.faq-a p{color:rgba(255,255,255,.8);font-size:13px;line-height:1.7}
+.faq-a strong{color:#fff}
+</style>
+
 <script>
 const h=document.getElementById('hdr');
 window.addEventListener('scroll',()=>h.style.boxShadow=scrollY>50?'0 4px 20px rgba(0,0,0,.7)':'');
+function ptab(b){document.querySelectorAll('.pt').forEach(t=>t.classList.remove('active'));b.classList.add('active')}
+function faq(b){const a=b.nextElementSibling;const o=b.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open')});if(!o){b.classList.add('open');a.classList.add('open')}}
 </script>
 </body>
 </html>
