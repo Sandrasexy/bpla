@@ -313,7 +313,7 @@ input,select,textarea{font-family:inherit}
 <section id="req">
 <style>
 .sec{padding:70px 0}
-.sec-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:28px;font-style:italic}
+.sec-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:28px;font-style:italic;text-align:center}
 /* Требования: 2 колонки карточек + фото справа */
 .req-outer{display:flex;gap:20px;align-items:flex-start}
 .req-cards{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -455,14 +455,14 @@ input,select,textarea{font-family:inherit}
 .pi-ico{width:32px;height:32px;min-width:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-weight:700;font-size:15px;color:#fff;margin-top:1px}
 .pi strong{font-weight:700}
 /* Федеральная поддержка — синие аккордеон-карточки */
-.fed-ttl{font-family:'Oswald',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:700;color:var(--blue);font-style:italic;margin-bottom:28px;text-transform:uppercase}
-.fed-list{display:flex;flex-direction:column;gap:10px;max-width:740px}
+.fed-ttl{font-family:'Oswald',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:700;color:var(--blue);font-style:italic;margin-bottom:28px;text-transform:uppercase;text-align:center}
+.fed-list{display:flex;flex-direction:column;gap:10px;max-width:740px;margin-left:auto;margin-right:auto}
 .fed-item{border-radius:6px;overflow:hidden}
 .fed-q{display:flex;align-items:center;justify-content:space-between;background:var(--blue);color:#fff;padding:18px 20px;font-size:15px;font-weight:700;cursor:pointer;gap:12px}
 .fed-ico{width:28px;height:28px;border-radius:50%;border:2px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:300;flex-shrink:0;transition:transform .3s}
 .fed-item.open .fed-ico{transform:rotate(45deg)}
 .fed-a{max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;background:#1929B3;color:rgba(255,255,255,.9);font-size:15px;line-height:1.8;padding:0 20px}
-.fed-item.open .fed-a{max-height:260px;padding:14px 20px}
+.fed-item.open .fed-a{max-height:700px;padding:14px 20px}
 .fed-a li{margin-bottom:3px}
 .fed-a li::before{content:'— '}
 </style>
@@ -608,10 +608,11 @@ input,select,textarea{font-family:inherit}
 .mil-book-eagle{font-size:44px;color:rgba(255,220,100,.9)}
 .mil-book-txt{font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;color:#fff;letter-spacing:2px;line-height:1.5;text-transform:uppercase}
 /* Партнёры */
-.partners-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);text-transform:uppercase;font-style:italic;margin-bottom:36px}
+.partners-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);text-transform:uppercase;font-style:italic;margin-bottom:36px;text-align:center}
 .partners-row{display:flex;justify-content:center;align-items:flex-start;gap:36px;flex-wrap:wrap}
 .partner{text-align:center;width:190px}
 .partner-ico{width:80px;height:80px;border-radius:50%;border:2px solid #e0e0e0;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 12px;background:#f5f5f5}
+.partner-img{width:80px;height:80px;border-radius:50%;object-fit:contain;border:2px solid #e0e0e0;margin:0 auto 12px;display:block;background:#f5f5f5}
 .partner-name{font-size:14px;color:#555;line-height:1.5}
 </style>
 <div class="putin">
@@ -635,32 +636,11 @@ input,select,textarea{font-family:inherit}
       <div>
         <h2 class="cert-ttl">Сертификат</h2>
         <p class="cert-sub">Сертификат владения навыками управления БПЛА государственного образца</p>
-        <div class="cert-doc">
-          <div class="cert-doc-inner">
-            <div class="cert-doc-logos"><span>🏛️</span><span>🦅</span></div>
-            <div class="cert-doc-title">СЕРТИФИКАТ</div>
-            <div class="cert-doc-issued">ВЫДАН</div>
-            <hr class="cert-doc-line"/>
-            <div class="cert-doc-body">
-              в том, что он с &laquo;___&raquo; _______ 2025 г. по &laquo;___&raquo; _______ 2025 г.<br>
-              успешно прошёл курс обучения по дополнительной программе<br>
-              <strong>«Оператор беспилотных авиационных систем<br>(с максимальной взлётной массой 30 кг и менее)»</strong><br>
-              в объёме 75 часов, получил знания и навыки в соответствии с утверждённой программой
-            </div>
-            <div class="cert-doc-signs">
-              <span>ДАТА</span>
-              <span>ПОДПИСЬ</span>
-              <span>ДИРЕКТОР<br>Иванова Н.Л.</span>
-            </div>
-          </div>
-        </div>
+        <img src="img/cert.webp" alt="Сертификат оператора БПЛА" style="max-width:480px;width:100%;border-radius:6px;display:block"/>
       </div>
       <div class="cert-right-col">
-        <div class="cert-note">Полученные навыки являются частью подготовки к военно-учётной специальности «Пилот-оператор БПЛА».</div>
-        <div class="mil-book">
-          <div class="mil-book-eagle">🦅</div>
-          <div class="mil-book-txt">Российская<br>Федерация<br><br>Военный<br>билет</div>
-        </div>
+        <img src="img/cert-skills.webp" alt="Полученные навыки — военно-учётная специальность" style="max-width:280px;width:100%;border-radius:6px;display:block"/>
+        <img src="img/mil-book.webp" alt="Военный билет" style="max-width:280px;width:100%;border-radius:4px;display:block"/>
       </div>
     </div>
   </div>
@@ -674,19 +654,19 @@ input,select,textarea{font-family:inherit}
     <h2 class="partners-ttl">Наши партнёры</h2>
     <div class="partners-row">
       <div class="partner">
-        <div class="partner-ico">🏛️</div>
+        <img src="img/partner1.webp" alt="Администрация Красногвардейского района" class="partner-img"/>
         <div class="partner-name">Администрация Красногвардейского района Санкт-Петербурга</div>
       </div>
       <div class="partner">
-        <div class="partner-ico">🦅</div>
+        <img src="img/partner2.webp" alt="Военный комиссариат Красногвардейского района" class="partner-img"/>
         <div class="partner-name">Военный комиссариат Красногвардейского района Санкт-Петербурга</div>
       </div>
       <div class="partner">
-        <div class="partner-ico">⚙️</div>
+        <img src="img/partner3.webp" alt="ГБУ ДО ЦДЮТТ Охта" class="partner-img"/>
         <div class="partner-name">ГБУ ДО ЦДЮТТ Красногвардейского района Санкт-Петербурга «Охта»</div>
       </div>
       <div class="partner">
-        <div class="partner-ico" style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:#1a1a1a;border-radius:4px">ГОРТЕНЗИЯ</div>
+        <img src="img/partner4.webp" alt="КБ Гортензия" class="partner-img"/>
         <div class="partner-name">КБ «Гортензия»</div>
       </div>
     </div>
@@ -781,16 +761,6 @@ input,select,textarea{font-family:inherit}
           <div class="fg">
             <input type="tel" name="phone" class="fi" placeholder="Телефон" required/>
             <div class="fe" id="ep"></div>
-          </div>
-          <div class="fg">
-            <label class="lb">ОГРН <span class="rq">*</span><span style="color:#888;font-size:13px"> — 19 цифр</span></label>
-            <input type="text" name="ogrn" class="fi" placeholder="0000000000000000000" minlength="19" maxlength="19" required inputmode="numeric"/>
-            <div class="fe" id="eog"></div>
-          </div>
-          <div class="fg">
-            <label class="lb">ОКПО <span class="rq">*</span><span style="color:#888;font-size:13px"> — 14 цифр</span></label>
-            <input type="text" name="okpo" class="fi" placeholder="00000000000000" minlength="14" maxlength="14" required inputmode="numeric"/>
-            <div class="fe" id="eok"></div>
           </div>
           <div class="fg" style="margin-top:4px">
             <button type="submit" class="btn-blue">Отправить</button>
@@ -998,11 +968,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(v.length>=9)f+='-'+v.slice(9,11);
     this.value=f;
   });
-  /* Только цифры в ОГРН / ОКПО */
-  ['ogrn','okpo'].forEach(n=>{
-    const el=document.querySelector('[name='+n+']');
-    if(el)el.addEventListener('input',function(){this.value=this.value.replace(/\D/g,'')});
-  });
 });
 
 /* Валидация формы */
@@ -1015,8 +980,6 @@ function doSubmit(ev){
   function inv(n,id,m){const e=f.querySelector('[name='+n+']');if(e)e.classList.add('inv');se(id,m);ok=false}
   if(!f.name.value.trim()||f.name.value.trim().length<2)inv('name','en','Введите имя');
   if(f.phone.value.replace(/\D/g,'').length<11)inv('phone','ep','Введите корректный телефон');
-  if(!f.ogrn.value||f.ogrn.value.length!==19)inv('ogrn','eog','ОГРН — ровно 19 цифр');
-  if(!f.okpo.value||f.okpo.value.length!==14)inv('okpo','eok','ОКПО — ровно 14 цифр');
   if(ok){
     document.getElementById('fok').style.display='block';
     const btn=f.querySelector('[type=submit]');
