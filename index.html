@@ -374,6 +374,19 @@ input,select,textarea{font-family:inherit}
 .tl-sp{height:20px}/* spacer = same height as arrow+margin, keeps circles aligned */
 .tl-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
 .tl-box{border:1px solid #ddd;border-radius:6px;padding:16px 18px;font-size:14px;color:#555;line-height:1.65}
+/* Мобильные элементы — на десктопе скрыты */
+.mob-arr-d{display:none}
+.tl-mob-label{display:none;font-size:13px;color:#555;line-height:1.5;text-align:center;max-width:240px;padding-bottom:12px}
+@media(max-width:680px){
+  .tl-row1,.tl-row2{flex-direction:column;align-items:center;gap:0}
+  .tl-row1::before,.tl-row2::before{display:none}
+  .tl-item{flex:none;width:100%;max-width:300px;align-items:center}
+  .tl-top,.tl-arr-u,.tl-sp,.tl-bot{display:none}
+  .tl-arr-d{display:block}
+  .mob-arr-d{display:block}
+  .tl-mob-label{display:block}
+  .tl-boxes{display:none}/* тексты шагов 5 и 7 переехали в tl-mob-label внутри item */
+}
 /* Программа */
 .prog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:28px;flex-wrap:wrap}
 .prog-badge{background:var(--blue);color:#fff;font-size:14px;font-weight:500;line-height:1.5;padding:16px 20px;border-radius:6px;max-width:280px;flex-shrink:0}
@@ -394,37 +407,43 @@ input,select,textarea{font-family:inherit}
     </div>
     <!-- Ряд 1: шаги 1-4 (нечётные — текст сверху, чётные — снизу) -->
     <div class="tl-row1">
-      <!-- 1: текст сверху, стрелка вверх -->
+      <!-- 1: текст сверху (десктоп), текст снизу (моб) -->
       <div class="tl-item">
         <div class="tl-top">Оставляете заявку на сайте или звоните по номеру 8 800 333 26 15</div>
         <div class="tl-arr-u"></div>
         <div class="tl-circle">1</div>
+        <div class="mob-arr-d tl-arr-d"></div>
+        <div class="tl-mob-label">Оставляете заявку на сайте или звоните по номеру 8 800 333 26 15</div>
         <div class="tl-sp"></div>
         <div class="tl-bot"></div>
       </div>
-      <!-- 2: текст снизу, стрелка вниз -->
+      <!-- 2: текст снизу -->
       <div class="tl-item">
         <div class="tl-top"></div>
         <div class="tl-sp"></div>
         <div class="tl-circle">2</div>
         <div class="tl-arr-d"></div>
         <div class="tl-bot">Мы связываемся с вами для уточнения всех деталей</div>
+        <div class="tl-mob-label">Мы связываемся с вами для уточнения всех деталей</div>
       </div>
-      <!-- 3: текст сверху, стрелка вверх -->
+      <!-- 3: текст сверху (десктоп), текст снизу (моб) -->
       <div class="tl-item">
         <div class="tl-top">Отправляем обязательную анкету для заполнения</div>
         <div class="tl-arr-u"></div>
         <div class="tl-circle">3</div>
+        <div class="mob-arr-d tl-arr-d"></div>
+        <div class="tl-mob-label">Отправляем обязательную анкету для заполнения</div>
         <div class="tl-sp"></div>
         <div class="tl-bot"></div>
       </div>
-      <!-- 4: текст снизу, стрелка вниз -->
+      <!-- 4: текст снизу -->
       <div class="tl-item">
         <div class="tl-top"></div>
         <div class="tl-sp"></div>
         <div class="tl-circle">4</div>
         <div class="tl-arr-d"></div>
         <div class="tl-bot">Согласовываем вашу кандидатуру с Министерством Обороны РФ</div>
+        <div class="tl-mob-label">Согласовываем вашу кандидатуру с Министерством Обороны РФ</div>
       </div>
     </div>
     <!-- Блоки между рядами (метки для шагов 5 и 7) -->
@@ -434,33 +453,39 @@ input,select,textarea{font-family:inherit}
     </div>
     <!-- Ряд 2: шаги 5-8 (5,7 — стрелка вверх к блоку, 6,8 — текст снизу) -->
     <div class="tl-row2">
-      <!-- 5: стрелка вверх к блоку -->
+      <!-- 5: стрелка к блоку (десктоп); текст блока снизу (моб) -->
       <div class="tl-item">
         <div class="tl-arr-u"></div>
         <div class="tl-circle">5</div>
+        <div class="mob-arr-d tl-arr-d"></div>
+        <div class="tl-mob-label">В случае положительного решения организуем ваш приезд в Центр подготовки операторов БПЛА и разместим в комфортабельной гостинице</div>
         <div class="tl-sp"></div>
         <div class="tl-bot"></div>
       </div>
-      <!-- 6: текст снизу, стрелка вниз -->
+      <!-- 6: текст снизу -->
       <div class="tl-item">
         <div class="tl-sp"></div>
         <div class="tl-circle">6</div>
         <div class="tl-arr-d"></div>
         <div class="tl-bot">Вы подписываете договор на прохождение обучения в Центре БПЛА</div>
+        <div class="tl-mob-label">Вы подписываете договор на прохождение обучения в Центре БПЛА</div>
       </div>
-      <!-- 7: стрелка вверх к блоку -->
+      <!-- 7: стрелка к блоку (десктоп); текст блока снизу (моб) -->
       <div class="tl-item">
         <div class="tl-arr-u"></div>
         <div class="tl-circle">7</div>
+        <div class="mob-arr-d tl-arr-d"></div>
+        <div class="tl-mob-label">После прохождения обучения, сдачи экзаменов и получения сертификата мы оказываем вам содействие в подписании контракта с Министерством Обороны РФ</div>
         <div class="tl-sp"></div>
         <div class="tl-bot"></div>
       </div>
-      <!-- 8: текст снизу, стрелка вниз -->
+      <!-- 8: текст снизу -->
       <div class="tl-item">
         <div class="tl-sp"></div>
         <div class="tl-circle">8</div>
         <div class="tl-arr-d"></div>
         <div class="tl-bot">После подписания контракта убываете в воинскую часть для дальнейшего прохождения службы в подразделении БПЛА</div>
+        <div class="tl-mob-label">После подписания контракта убываете в воинскую часть для дальнейшего прохождения службы в подразделении БПЛА</div>
       </div>
     </div>
   </div>
