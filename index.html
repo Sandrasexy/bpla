@@ -1,2155 +1,281 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Бесплатное обучение на оператора БПЛА — Центр БПЛА «СВОин»</title>
-  <meta name="description" content="Бесплатное обучение на оператора БПЛА. Единовременная выплата до 4 400 000 руб. Гарантированное подписание контракта с МО РФ." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #0a1628;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    img { max-width: 100%; display: block; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Бесплатное обучение на оператора БПЛА — Центр БПЛА «СВОин»</title>
+<meta name="description" content="Бесплатное обучение на оператора БПЛА. Единовременная выплата до 4 400 000 руб. Гарантированный контракт с МО РФ."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto',sans-serif;background:#0d1b3e;color:#fff;overflow-x:hidden;font-size:14px}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
 
-    /* ===== VARIABLES ===== */
-    :root {
-      --navy: #0a1628;
-      --navy2: #0d1f3c;
-      --navy3: #112347;
-      --gold: #c9a227;
-      --gold2: #e8bc34;
-      --red: #c0392b;
-      --red2: #e74c3c;
-      --white: #ffffff;
-      --gray: #8fa3c1;
-    }
+/* ===== VARS ===== */
+:root{
+  --bg1:#0d1b3e;
+  --bg2:#0a1628;
+  --bg3:#112347;
+  --gold:#d4a820;
+  --gold2:#f0c030;
+  --red:#c0392b;
+  --red2:#e03a2a;
+  --white:#ffffff;
+  --gray:#8899bb;
+  --border:rgba(212,168,32,0.25);
+}
 
-    /* ===== BUTTONS ===== */
-    .btn-red {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--red2), var(--red));
-      color: #fff;
-      font-family: 'Oswald', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 14px 36px;
-      border: none;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(231,76,60,0.4);
-    }
-    .btn-red:hover {
-      background: linear-gradient(135deg, var(--red), #a93226);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(231,76,60,0.6);
-    }
-    .btn-gold {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--gold2), var(--gold));
-      color: #0a1628;
-      font-family: 'Oswald', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 12px 32px;
-      border: none;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(201,162,39,0.4);
-    }
-    .btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(201,162,39,0.6);
-    }
+/* ===== BTNS ===== */
+.btn-red{
+  display:inline-block;
+  background:linear-gradient(135deg,#e03a2a,#c0392b);
+  color:#fff;font-family:'Oswald',sans-serif;font-weight:600;
+  font-size:15px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:13px 32px;border-radius:3px;
+  box-shadow:0 4px 16px rgba(192,57,43,.45);
+  transition:transform .25s,box-shadow .25s;
+}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(192,57,43,.65)}
+.btn-gold{
+  display:inline-block;
+  background:linear-gradient(135deg,#f0c030,#d4a820);
+  color:#0d1b3e;font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  padding:11px 28px;border-radius:3px;
+  box-shadow:0 4px 14px rgba(212,168,32,.4);
+  transition:transform .25s,box-shadow .25s;
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,168,32,.6)}
 
-    /* ===== SECTION TITLES ===== */
-    .section-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(22px, 3vw, 36px);
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .section-title span { color: var(--gold2); }
-    .section-subtitle {
-      text-align: center;
-      color: var(--gray);
-      font-size: 16px;
-      margin-bottom: 40px;
-    }
-    .gold-line {
-      width: 60px;
-      height: 3px;
-      background: var(--gold2);
-      margin: 10px auto 30px;
-    }
+/* ===== LAYOUT ===== */
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
 
-    /* ===== CONTAINER ===== */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+/* ===== SECTION COMMON ===== */
+.sec-title{
+  font-family:'Oswald',sans-serif;font-size:clamp(20px,2.8vw,32px);
+  font-weight:700;text-transform:uppercase;color:#fff;
+  text-align:center;margin-bottom:8px;
+}
+.sec-title span{color:var(--gold2)}
+.gold-line{width:56px;height:3px;background:var(--gold2);margin:0 auto 28px}
 
-    /* ===== HEADER ===== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(10, 22, 40, 0.97);
-      border-bottom: 2px solid var(--gold);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    .site-header.scrolled {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .header-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .logo-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: #0a1628;
-      flex-shrink: 0;
-    }
-    .logo-text {
-      font-family: 'Oswald', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-    }
-    .logo-text small {
-      display: block;
-      font-size: 11px;
-      color: var(--gold2);
-      letter-spacing: 1px;
-      font-weight: 400;
-    }
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .header-nav a {
-      font-size: 13px;
-      font-weight: 500;
-      color: #ccc;
-      transition: color 0.2s;
-      white-space: nowrap;
-    }
-    .header-nav a:hover { color: var(--gold2); }
-    .header-contacts {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .header-phone {
-      font-family: 'Oswald', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--gold2);
-    }
-    .header-phone small {
-      display: block;
-      font-size: 11px;
-      color: var(--gray);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
+/* =============================================
+   HEADER
+   ============================================= */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(10,20,50,.97);
+  border-bottom:2px solid var(--gold);
+  backdrop-filter:blur(8px);
+  transition:box-shadow .3s;
+}
+.site-header.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.7)}
+.hdr{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1160px;margin:0 auto;padding:10px 20px;gap:16px;
+}
+/* logo */
+.hdr-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.hdr-logo-badge{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:11px;
+  color:#0d1b3e;text-align:center;line-height:1.2;flex-shrink:0;
+}
+.hdr-logo-text{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;line-height:1.2}
+.hdr-logo-text small{display:block;font-size:10px;color:var(--gold2);font-weight:400;letter-spacing:.5px}
+/* nav */
+.hdr-nav{display:flex;gap:18px;align-items:center}
+.hdr-nav a{font-size:12px;color:#bbc;transition:color .2s;white-space:nowrap}
+.hdr-nav a:hover{color:var(--gold2)}
+/* contacts */
+.hdr-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.hdr-phone{text-align:right}
+.hdr-phone a{font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;color:var(--gold2)}
+.hdr-phone small{display:block;font-size:10px;color:var(--gray)}
 
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(to right, rgba(10,22,40,0.92) 55%, rgba(10,22,40,0.5) 100%),
-        url('https://images.unsplash.com/photo-1601280163022-7f5c6c3a8e27?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 120px 0 60px;
-    }
-    .hero-content {
-      max-width: 640px;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      margin-bottom: 20px;
-      border-radius: 2px;
-    }
-    .hero-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 700;
-      line-height: 1.05;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero-title .accent { color: var(--gold2); }
-    .hero-title .main-word {
-      font-size: clamp(42px, 6vw, 72px);
-      color: #fff;
-    }
-    .hero-salary {
-      margin: 20px 0 30px;
-    }
-    .hero-salary .row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-    .hero-salary .label {
-      font-size: 14px;
-      color: var(--gray);
-    }
-    .hero-salary .amount {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(26px, 3.5vw, 38px);
-      font-weight: 700;
-      color: var(--gold2);
-    }
-    .hero-salary .suffix {
-      font-size: 14px;
-      color: var(--gray);
-    }
-    .hero-note {
-      font-size: 13px;
-      color: var(--gray);
-      margin-bottom: 10px;
-      margin-top: -15px;
-    }
-    .hero-cta {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .hero-guarantee {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--gray);
-    }
-    .hero-guarantee::before {
-      content: '✓';
-      color: var(--gold2);
-      font-weight: 700;
-      font-size: 16px;
-    }
+/* =============================================
+   HERO
+   ============================================= */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(135deg,#070f22 0%,#0d1b3e 60%,#0f2248 100%);
+  padding:100px 0 60px;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:40px;align-items:center;position:relative;z-index:1;
+}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
 
-    /* ===== URGENCY BAR ===== */
-    .urgency-bar {
-      background: linear-gradient(90deg, #1a0a0a, #2a0d0d, #1a0a0a);
-      border-top: 1px solid rgba(192,57,43,0.4);
-      border-bottom: 1px solid rgba(192,57,43,0.4);
-      padding: 14px 0;
-    }
-    .urgency-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .urgency-text {
-      font-family: 'Oswald', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: #fff;
-    }
-    .urgency-highlight {
-      color: var(--red2);
-      font-size: 20px;
-    }
-    .urgency-pulse {
-      width: 10px;
-      height: 10px;
-      background: var(--red2);
-      border-radius: 50%;
-      animation: pulse 1.5s infinite;
-      flex-shrink: 0;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.4); }
-    }
+/* hero left */
+.hero-tag{
+  display:inline-block;background:var(--red);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:4px 12px;border-radius:2px;margin-bottom:18px;
+}
+.hero-title{
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(38px,5.5vw,68px);line-height:1.0;
+  text-transform:uppercase;margin-bottom:22px;
+}
+.hero-title .t-free{color:var(--gold2)}
+.hero-title .t-main{color:#fff}
+.hero-nums{margin-bottom:26px}
+.hero-num-row{display:flex;align-items:baseline;gap:6px;margin-bottom:10px}
+.hero-num-label{font-size:13px;color:var(--gray)}
+.hero-num-val{
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(28px,3.5vw,42px);color:var(--gold2);line-height:1;
+}
+.hero-num-val sup{font-size:16px}
+.hero-note{font-size:12px;color:var(--gray);margin-top:-6px;margin-bottom:4px}
+.hero-cta{margin-top:28px}
+.hero-cta .btn-red{font-size:18px;padding:16px 44px;letter-spacing:2px}
+.hero-checks{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+.hero-check{display:flex;align-items:center;gap:8px;font-size:13px;color:#ccd}
+.hero-check::before{content:'✓';color:var(--gold2);font-weight:700;font-size:15px;flex-shrink:0}
 
-    /* ===== ADVANTAGES ===== */
-    .advantages {
-      padding: 70px 0;
-      background: var(--navy2);
-    }
-    .adv-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .adv-card {
-      background: linear-gradient(145deg, #112347, #0d1b3c);
-      border: 1px solid rgba(201,162,39,0.2);
-      border-radius: 8px;
-      padding: 28px 22px;
-      text-align: center;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .adv-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--gold2));
-    }
-    .adv-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(201,162,39,0.5);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-    .adv-icon {
-      font-size: 40px;
-      margin-bottom: 16px;
-      display: block;
-    }
-    .adv-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--gold2);
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-    .adv-desc {
-      font-size: 13px;
-      color: var(--gray);
-      line-height: 1.6;
-    }
-  </style>
+/* hero right */
+.hero-img-wrap{position:relative;text-align:center}
+.hero-img-wrap img{
+  width:100%;max-width:520px;margin:0 auto;
+  filter:drop-shadow(0 0 40px rgba(13,27,62,.8));
+}
+.hero-img-badge{
+  position:absolute;bottom:20px;left:10px;
+  background:rgba(10,22,50,.9);border:1px solid var(--gold);
+  border-radius:6px;padding:10px 16px;
+  font-family:'Oswald',sans-serif;font-size:13px;color:var(--gold2);
+  backdrop-filter:blur(6px);
+}
+
+/* =============================================
+   URGENCY BAR
+   ============================================= */
+.urgency{
+  background:linear-gradient(90deg,#8b1a10,#c0392b,#8b1a10);
+  padding:13px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.urgency-inner{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;flex-wrap:wrap;
+}
+.urgency-dot{
+  width:10px;height:10px;background:#fff;border-radius:50%;
+  animation:blink 1.4s infinite;flex-shrink:0;
+}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+.urgency-text{
+  font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;
+  letter-spacing:1px;color:#fff;text-align:center;
+}
+.urgency-text strong{font-size:19px;color:#fff}
+</style>
 </head>
 <body>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <div class="header-logo">
-      <div class="logo-icon">БПЛА</div>
-      <div class="logo-text">
+  <div class="hdr">
+    <div class="hdr-logo">
+      <div class="hdr-logo-badge">БПЛА<br>СВО</div>
+      <div class="hdr-logo-text">
         Центр БПЛА <span style="color:var(--gold2)">«СВОин»</span>
-        <small>Официальный учебный центр</small>
+        <small>Официальный учебный центр МО РФ</small>
       </div>
     </div>
-    <nav class="header-nav">
+    <nav class="hdr-nav">
       <a href="#advantages">Преимущества</a>
       <a href="#requirements">Требования</a>
       <a href="#program">Программа</a>
       <a href="#payments">Выплаты</a>
+      <a href="#partners">Партнёры</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div class="header-contacts">
-      <div class="header-phone">
+    <div class="hdr-right">
+      <div class="hdr-phone">
         <a href="tel:+79600002576">8 960 000-25-76</a>
         <small>Бесплатная консультация</small>
       </div>
-      <a href="#form" class="btn-red" style="padding:10px 20px;font-size:13px;">Записаться</a>
+      <a href="#form" class="btn-red" style="padding:10px 18px;font-size:13px;">Записаться</a>
     </div>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="hero">
+<section class="hero" id="top">
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">Официальный учебный центр МО РФ</div>
-      <h1 class="hero-title">
-        <span class="accent">Бесплатное</span><br>
-        <span class="main-word">Обучение</span><br>
-        на оператора <span class="accent">БПЛА</span>
-      </h1>
-      <div class="hero-salary">
-        <div class="row">
-          <span class="label">выплата в первый год</span>
-          <span class="amount">от 10 000 000 <span style="font-size:20px">руб.</span></span>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">Официальный учебный центр МО РФ</div>
+        <h1 class="hero-title">
+          <span class="t-free">Бесплатное</span><br>
+          <span class="t-main">Обучение на</span><br>
+          <span class="t-main">Оператора <span class="t-free">БПЛА</span></span>
+        </h1>
+        <div class="hero-nums">
+          <div class="hero-num-row">
+            <span class="hero-num-label">от</span>
+            <span class="hero-num-val">10 000 000 <sup>руб.</sup></span>
+          </div>
+          <p class="hero-note">выплата в первый год</p>
+          <div class="hero-num-row" style="margin-top:8px">
+            <span class="hero-num-label">до</span>
+            <span class="hero-num-val">4 710 000 <sup>руб.</sup></span>
+          </div>
+          <p class="hero-note">за первый месяц после подписания контракта</p>
         </div>
-        <div class="row">
-          <span class="label">до</span>
-          <span class="amount">4 710 000 <span style="font-size:20px">руб.</span></span>
+        <div class="hero-cta">
+          <a href="#form" class="btn-red">ХОЧУ В БПЛА</a>
         </div>
-        <p class="hero-note">за первый месяц после подписания контракта</p>
+        <div class="hero-checks">
+          <div class="hero-check">Бесплатное обучение — без вложений</div>
+          <div class="hero-check">Гарантированный контракт с МО РФ</div>
+          <div class="hero-check">Сертификат оператора БПЛА</div>
+        </div>
       </div>
-      <div class="hero-cta">
-        <a href="#form" class="btn-red" style="font-size:18px;padding:16px 44px;">ХОЧУ В БПЛА</a>
-      </div>
-      <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;">
-        <div class="hero-guarantee">Бесплатное обучение — без вложений с вашей стороны</div>
-        <div class="hero-guarantee">Гарантированный контракт с МО РФ</div>
-        <div class="hero-guarantee">Сертификат оператора БПЛА после обучения</div>
+      <div class="hero-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1586688882853-0a8acf8cabe2?w=700&auto=format&fit=crop&q=80"
+          alt="Оператор БПЛА"
+          onerror="this.style.display='none'"
+        />
+        <div class="hero-img-badge">Набор открыт — осталось 8 мест</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== URGENCY BAR ===== -->
-<div class="urgency-bar">
+<!-- ===== URGENCY ===== -->
+<div class="urgency">
   <div class="urgency-inner">
-    <div class="urgency-pulse"></div>
+    <div class="urgency-dot"></div>
     <div class="urgency-text">
-      ОСТАЛОСЬ <span class="urgency-highlight">8 ИЗ 20</span> СВОБОДНЫХ МЕСТ — УСПЕЙТЕ ЗАНЯТЬ СВОЁ!
+      ОСТАЛОСЬ <strong>8 ИЗ 20</strong> СВОБОДНЫХ МЕСТ — УСПЕЙТЕ ЗАНЯТЬ СВОЁ!
     </div>
-    <a href="#form" class="btn-red" style="padding:10px 24px;font-size:14px;">ЗАНЯТЬ МЕСТО</a>
+    <a href="#form" class="btn-red" style="padding:9px 22px;font-size:13px;">ЗАНЯТЬ МЕСТО</a>
   </div>
 </div>
 
-<!-- ===== ADVANTAGES ===== -->
-<section class="advantages" id="advantages">
-  <div class="container">
-    <h2 class="section-title">Преимущества обучения в Центре БПЛА <span>«СВОин»</span></h2>
-    <div class="gold-line"></div>
-    <div class="adv-grid">
-      <div class="adv-card">
-        <span class="adv-icon">🎓</span>
-        <div class="adv-title">Бесплатное обучение</div>
-        <div class="adv-desc">Полностью бесплатный курс подготовки оператора БПЛА от 7 до 15 часов практики</div>
-      </div>
-      <div class="adv-card">
-        <span class="adv-icon">📋</span>
-        <div class="adv-title">Профессия с нуля</div>
-        <div class="adv-desc">Обучим с нуля — не нужно иметь специального образования или опыта</div>
-      </div>
-      <div class="adv-card">
-        <span class="adv-icon">🤝</span>
-        <div class="adv-title">Приём и гарантия</div>
-        <div class="adv-desc">Гарантированное подписание контракта с Министерством Обороны РФ</div>
-      </div>
-      <div class="adv-card">
-        <span class="adv-icon">📜</span>
-        <div class="adv-title">Сертификация</div>
-        <div class="adv-desc">Сертификат оператора БПЛА государственного образца после прохождения курса</div>
-      </div>
-      <div class="adv-card">
-        <span class="adv-icon">💰</span>
-        <div class="adv-title">Гарантия подписания контракта</div>
-        <div class="adv-desc">Единовременная выплата до 4 400 000 руб. сразу после подписания контракта</div>
-      </div>
-      <div class="adv-card">
-        <span class="adv-icon">🛡️</span>
-        <div class="adv-title">Гарантия устройства на службу</div>
-        <div class="adv-desc">100% трудоустройство. Денежное довольствие от 210 000 руб. в месяц</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TICKER ===== -->
-<div class="ticker-wrap" id="ticker">
-  <div class="ticker-track">
-    <span class="ticker-item">БЕСПЛАТНОЕ ОБУЧЕНИЕ &gt;&gt;&gt;</span>
-    <span class="ticker-item">ЕДИНОВРЕМЕННАЯ ВЫПЛАТА ДО 4 400 000 РУБ. &gt;&gt;&gt;</span>
-    <span class="ticker-item">ОБЩАЯ ВЫПЛАТА ЗА ГОД ОТ 10 000 000 РУБ. &gt;&gt;&gt;</span>
-    <span class="ticker-item">ГАРАНТИРОВАННОЕ ПОДПИСАНИЕ КОНТРАКТА С МО РФ &gt;&gt;&gt;</span>
-    <span class="ticker-item">СЕРТИФИКАТ ОПЕРАТОРА БПЛА ПОСЛЕ ОБУЧЕНИЯ &gt;&gt;&gt;</span>
-    <span class="ticker-item">БЕСПЛАТНОЕ ОБУЧЕНИЕ &gt;&gt;&gt;</span>
-    <span class="ticker-item">ЕДИНОВРЕМЕННАЯ ВЫПЛАТА ДО 4 400 000 РУБ. &gt;&gt;&gt;</span>
-    <span class="ticker-item">ОБЩАЯ ВЫПЛАТА ЗА ГОД ОТ 10 000 000 РУБ. &gt;&gt;&gt;</span>
-    <span class="ticker-item">ГАРАНТИРОВАННОЕ ПОДПИСАНИЕ КОНТРАКТА С МО РФ &gt;&gt;&gt;</span>
-    <span class="ticker-item">СЕРТИФИКАТ ОПЕРАТОРА БПЛА ПОСЛЕ ОБУЧЕНИЯ &gt;&gt;&gt;</span>
-  </div>
-</div>
-
-<!-- ===== REQUIREMENTS ===== -->
-<section class="requirements" id="requirements">
-  <div class="container">
-    <h2 class="section-title">Требования к <span>кандидатам</span></h2>
-    <div class="gold-line"></div>
-    <div class="req-grid">
-      <div class="req-card">
-        <div class="req-num">1</div>
-        <div class="req-body">
-          <div class="req-title">Возраст</div>
-          <div class="req-desc">От 18 до 60 лет. Граждане Российской Федерации</div>
-        </div>
-      </div>
-      <div class="req-card">
-        <div class="req-num">2</div>
-        <div class="req-body">
-          <div class="req-title">Военный билет</div>
-          <div class="req-desc">Наличие воинского учёта или отсутствие противопоказаний к военной службе</div>
-        </div>
-      </div>
-      <div class="req-card">
-        <div class="req-num">3</div>
-        <div class="req-body">
-          <div class="req-title">Состояние здоровья</div>
-          <div class="req-desc">Годен к военной службе по состоянию здоровья (категория А или Б)</div>
-        </div>
-      </div>
-      <div class="req-card">
-        <div class="req-num">4</div>
-        <div class="req-body">
-          <div class="req-title">Образование</div>
-          <div class="req-desc">Среднее общее образование (11 классов) или среднее специальное</div>
-        </div>
-      </div>
-      <div class="req-card">
-        <div class="req-num">5</div>
-        <div class="req-body">
-          <div class="req-title">Судимость</div>
-          <div class="req-desc">Отсутствие судимостей и уголовного преследования</div>
-        </div>
-      </div>
-      <div class="req-card">
-        <div class="req-num">6</div>
-        <div class="req-body">
-          <div class="req-title">Военное звание</div>
-          <div class="req-desc">Звание значения не имеет — принимаем рядовых, сержантов и офицеров запаса</div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;">
-      <p style="color:var(--gray);font-size:15px;margin-bottom:20px;">Если не подходите под эти требования, всё равно заполните заявку — мы найдём решение!</p>
-      <a href="#form" class="btn-red">ХОЧУ В БПЛА</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== HOW IT WORKS ===== -->
-<section class="how-works" id="how">
-  <div class="container">
-    <h2 class="section-title">Как проходит обучение на оператора БПЛА<br><span>и устройство на контрактную службу</span></h2>
-    <div class="gold-line"></div>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-icon">📝</div>
-        <div class="step-title">Заявка</div>
-        <div class="step-desc">Оставляете заявку на сайте. Менеджер связывается с вами в течение 15 минут</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-icon">📋</div>
-        <div class="step-title">Консультация</div>
-        <div class="step-desc">Отвечаем на все вопросы, рассказываем о программе и условиях контракта</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-icon">🩺</div>
-        <div class="step-title">Сбор документов</div>
-        <div class="step-desc">Помогаем собрать необходимые документы и пройти медицинскую комиссию</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-icon">🚁</div>
-        <div class="step-title">Обучение</div>
-        <div class="step-desc">7–15 часов практических занятий на современных БПЛА. Полностью бесплатно</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">5</div>
-        <div class="step-icon">🎓</div>
-        <div class="step-title">Сертификат</div>
-        <div class="step-desc">Получаете сертификат оператора БПЛА государственного образца</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">6</div>
-        <div class="step-icon">✍️</div>
-        <div class="step-title">Контракт</div>
-        <div class="step-desc">Подписываете контракт с МО РФ и получаете единовременную выплату</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">7</div>
-        <div class="step-icon">💳</div>
-        <div class="step-title">Выплата</div>
-        <div class="step-desc">Единовременная выплата до 4 400 000 руб. поступает на счёт</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">8</div>
-        <div class="step-icon">🛡️</div>
-        <div class="step-title">Служба</div>
-        <div class="step-desc">Приступаете к службе оператором БПЛА с ежемесячным доходом от 210 000 руб.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROGRAM ===== -->
-<section class="program" id="program">
-  <div class="container">
-    <div class="program-inner">
-      <div class="program-left">
-        <h2 class="section-title" style="text-align:left;">Программа <span>курса</span></h2>
-        <div class="gold-line" style="margin-left:0;"></div>
-        <p style="color:var(--gray);margin-bottom:24px;line-height:1.7;">
-          Наш курс подготовки операторов БПЛА разработан совместно с военными специалистами и включает как теоретическую подготовку, так и интенсивную практику.
-        </p>
-        <ul class="program-list">
-          <li><span class="prog-check">✓</span> Теоретические основы управления БПЛА</li>
-          <li><span class="prog-check">✓</span> Техническое устройство беспилотных летательных аппаратов</li>
-          <li><span class="prog-check">✓</span> Правила безопасности и воздушное законодательство</li>
-          <li><span class="prog-check">✓</span> Навигация и работа с картами местности</li>
-          <li><span class="prog-check">✓</span> Практические полёты — от 7 до 15 часов</li>
-          <li><span class="prog-check">✓</span> Действия в нештатных ситуациях</li>
-          <li><span class="prog-check">✓</span> Тактика применения БПЛА в боевых условиях</li>
-          <li><span class="prog-check">✓</span> Сдача квалификационного экзамена</li>
-        </ul>
-        <div class="prog-highlight">
-          <div class="prog-hl-num">7–15</div>
-          <div>
-            <strong>часов практики</strong><br>
-            <span style="color:var(--gray);font-size:13px;">на реальных дронах под руководством инструктора</span>
-          </div>
-        </div>
-      </div>
-      <div class="program-right">
-        <div class="prog-image-block">
-          <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=600&auto=format&fit=crop&q=80" alt="Обучение оператора БПЛА" style="border-radius:8px;width:100%;" />
-          <div class="prog-image-caption">Практические занятия на учебном полигоне</div>
-        </div>
-        <div class="prog-image-block" style="margin-top:16px;">
-          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&auto=format&fit=crop&q=80" alt="БПЛА в полёте" style="border-radius:8px;width:100%;" />
-          <div class="prog-image-caption">Современные БПЛА военного класса</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS для этапа 2 -->
-<style>
-  /* TICKER */
-  .ticker-wrap {
-    background: linear-gradient(90deg, var(--red) 0%, #9b1c0f 50%, var(--red) 100%);
-    overflow: hidden;
-    padding: 12px 0;
-    border-top: 2px solid rgba(255,255,255,0.15);
-    border-bottom: 2px solid rgba(255,255,255,0.15);
-  }
-  .ticker-track {
-    display: flex;
-    white-space: nowrap;
-    animation: ticker-scroll 30s linear infinite;
-  }
-  .ticker-item {
-    font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    color: #fff;
-    padding: 0 30px;
-    flex-shrink: 0;
-  }
-  @keyframes ticker-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
-
-  /* REQUIREMENTS */
-  .requirements {
-    padding: 70px 0;
-    background: var(--navy);
-  }
-  .req-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .req-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    background: linear-gradient(135deg, #112347, #0d1b3c);
-    border: 1px solid rgba(201,162,39,0.2);
-    border-radius: 8px;
-    padding: 22px 20px;
-    transition: all 0.3s;
-  }
-  .req-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
-  .req-num {
-    width: 44px;
-    height: 44px;
-    background: var(--gold);
-    color: #0a1628;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-  .req-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-  }
-  .req-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
-
-  /* HOW IT WORKS */
-  .how-works {
-    padding: 70px 0;
-    background: var(--navy2);
-  }
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  @media (max-width: 900px) {
-    .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 500px) {
-    .steps-grid { grid-template-columns: 1fr; }
-  }
-  .step-card {
-    background: linear-gradient(145deg, #112347, #0d1b3c);
-    border: 1px solid rgba(201,162,39,0.15);
-    border-radius: 8px;
-    padding: 24px 18px;
-    text-align: center;
-    position: relative;
-    transition: all 0.3s;
-  }
-  .step-card:hover {
-    border-color: rgba(201,162,39,0.5);
-    transform: translateY(-4px);
-  }
-  .step-num {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 28px;
-    height: 28px;
-    background: var(--red);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  .step-icon { font-size: 32px; margin: 10px 0 10px; }
-  .step-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--gold2);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-  }
-  .step-desc { font-size: 12px; color: var(--gray); line-height: 1.6; }
-
-  /* PROGRAM */
-  .program {
-    padding: 70px 0;
-    background: var(--navy);
-  }
-  .program-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .program-inner { grid-template-columns: 1fr; }
-  }
-  .program-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 30px;
-  }
-  .program-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14px;
-    color: #dde;
-    line-height: 1.5;
-  }
-  .prog-check {
-    color: var(--gold2);
-    font-weight: 700;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-  .prog-highlight {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: linear-gradient(135deg, rgba(201,162,39,0.15), rgba(201,162,39,0.05));
-    border: 1px solid rgba(201,162,39,0.3);
-    border-radius: 8px;
-    padding: 18px 22px;
-  }
-  .prog-hl-num {
-    font-family: 'Oswald', sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--gold2);
-    line-height: 1;
-  }
-  .prog-image-caption {
-    font-size: 12px;
-    color: var(--gray);
-    margin-top: 8px;
-    text-align: center;
-  }
-</style>
-
-<!-- ===== PAYMENTS ===== -->
-<section class="payments" id="payments">
-  <div class="container">
-    <h2 class="section-title">Дополнительные <span>единовременные выплаты</span></h2>
-    <div class="gold-line"></div>
-    <div class="payments-tabs">
-      <button class="pay-tab active" data-tab="all">Все выплаты</button>
-      <button class="pay-tab" data-tab="contract">При контракте</button>
-      <button class="pay-tab" data-tab="service">За службу</button>
-      <button class="pay-tab" data-tab="extra">Дополнительно</button>
-    </div>
-    <div class="payments-list">
-      <div class="pay-item">
-        <div class="pay-icon">💰</div>
-        <div class="pay-body">
-          <div class="pay-title">До 4 400 000 руб. — единовременная выплата при подписании контракта</div>
-          <div class="pay-note">Выплачивается в течение 30 дней с момента подписания контракта</div>
-        </div>
-        <div class="pay-amount">4 400 000 ₽</div>
-      </div>
-      <div class="pay-item">
-        <div class="pay-icon">📊</div>
-        <div class="pay-body">
-          <div class="pay-title">До 200 000 руб. — выплата участника СВО (ежемесячно)</div>
-          <div class="pay-note">Ежемесячная надбавка за участие в специальной военной операции</div>
-        </div>
-        <div class="pay-amount">200 000 ₽/мес</div>
-      </div>
-      <div class="pay-item">
-        <div class="pay-icon">🏠</div>
-        <div class="pay-body">
-          <div class="pay-title">Жилищная субсидия — до 3 500 000 руб.</div>
-          <div class="pay-note">Единовременная жилищная субсидия после 10 лет контрактной службы</div>
-        </div>
-        <div class="pay-amount">3 500 000 ₽</div>
-      </div>
-      <div class="pay-item">
-        <div class="pay-icon">🎖️</div>
-        <div class="pay-body">
-          <div class="pay-title">Надбавка за боевые заслуги и государственные награды</div>
-          <div class="pay-note">Выплачивается при получении орденов и медалей МО РФ</div>
-        </div>
-        <div class="pay-amount">до 200%</div>
-      </div>
-      <div class="pay-item">
-        <div class="pay-icon">👨‍👩‍👧</div>
-        <div class="pay-body">
-          <div class="pay-title">Льготы для семьи: образование детей, медицина, санаторий</div>
-          <div class="pay-note">Члены семьи военнослужащего пользуются расширенным социальным пакетом</div>
-        </div>
-        <div class="pay-amount">бесплатно</div>
-      </div>
-      <div class="pay-item">
-        <div class="pay-icon">🔐</div>
-        <div class="pay-body">
-          <div class="pay-title">Страхование жизни и здоровья — до 3 000 000 руб.</div>
-          <div class="pay-note">Государственное обязательное страхование на всё время службы</div>
-        </div>
-        <div class="pay-amount">3 000 000 ₽</div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="#form" class="btn-red">ХОЧУ УЗНАТЬ ВСЕ ВЫПЛАТЫ</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FEDERAL SUPPORT ===== -->
-<section class="federal" id="federal">
-  <div class="container">
-    <h2 class="section-title">Дополнительная <span>Федеральная поддержка</span></h2>
-    <div class="gold-line"></div>
-    <div class="federal-grid">
-      <div class="fed-item">
-        <div class="fed-icon">🏥</div>
-        <div class="fed-text">
-          <strong>Бесплатная медицинская помощь</strong>
-          <span>Военнослужащий и члены его семьи получают бесплатную медицинскую помощь в военных госпиталях</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-      <div class="fed-item">
-        <div class="fed-icon">🎓</div>
-        <div class="fed-text">
-          <strong>Образование и переквалификация</strong>
-          <span>Бесплатное профессиональное образование и переквалификация за счёт государства</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-      <div class="fed-item">
-        <div class="fed-icon">🏡</div>
-        <div class="fed-text">
-          <strong>ИЖС — собственный дом</strong>
-          <span>Участие в государственной программе индивидуального жилищного строительства</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-      <div class="fed-item">
-        <div class="fed-icon">📦</div>
-        <div class="fed-text">
-          <strong>Обеспечение и снаряжение</strong>
-          <span>Полное государственное обеспечение: форма, питание, снаряжение, техника</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-      <div class="fed-item">
-        <div class="fed-icon">✈️</div>
-        <div class="fed-text">
-          <strong>Авиабилеты</strong>
-          <span>Бесплатный проезд к месту службы и обратно в отпуск для военнослужащего и семьи</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-      <div class="fed-item">
-        <div class="fed-icon">🏖️</div>
-        <div class="fed-text">
-          <strong>Дополнительный отпуск</strong>
-          <span>Расширенный отпуск — до 45 суток в год + дополнительный отпуск за выслугу лет</span>
-        </div>
-        <div class="fed-arrow">›</div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="#form" class="btn-red">ХОЧУ В БПЛА</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PUTIN QUOTE ===== -->
-<section class="putin-section">
-  <div class="container">
-    <div class="putin-inner">
-      <div class="putin-photo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Vladimir_Putin_%282023%29.jpg/400px-Vladimir_Putin_%282023%29.jpg"
-          alt="Владимир Владимирович Путин"
-          onerror="this.src='https://via.placeholder.com/300x380/0d1b3c/c9a227?text=В.В.+Путин'"
-          style="border-radius:8px;width:100%;max-width:260px;border:3px solid var(--gold);" />
-        <div style="text-align:center;color:var(--gold2);font-family:'Oswald',sans-serif;font-size:15px;margin-top:12px;">Владимир Владимирович Путин</div>
-        <div style="text-align:center;color:var(--gray);font-size:12px;">Президент Российской Федерации</div>
-      </div>
-      <div class="putin-quote">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">
-          Операторы беспилотных летательных аппаратов — одна из самых важных и востребованных воинских специальностей в современной армии. Государство полностью обеспечивает подготовку и достойное денежное довольствие каждого военнослужащего. Россия заботится о тех, кто защищает её интересы.
-        </p>
-        <p class="quote-text" style="margin-top:16px;">
-          Защитники Родины и их семьи — в приоритете государственной поддержки. Каждый контрактник получает весь объём социальных гарантий, предусмотренных федеральным законодательством.
-        </p>
-        <div class="quote-signature">— В.В. Путин</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CERTIFICATE ===== -->
-<section class="certificate" id="certificate">
-  <div class="container">
-    <h2 class="section-title"><span>Сертификат</span></h2>
-    <div class="gold-line"></div>
-    <p class="section-subtitle">Сертификат оператора выдаётся учреждением БПЛА подготовки обучения</p>
-    <div class="cert-inner">
-      <div class="cert-img-wrap">
-        <div class="cert-mock">
-          <div class="cert-header-bar">РОССИЙСКАЯ ФЕДЕРАЦИЯ</div>
-          <div class="cert-emblem">⭐</div>
-          <div class="cert-title-text">СЕРТИФИКАТ</div>
-          <div class="cert-subtitle-text">Оператора Беспилотного Летательного Аппарата</div>
-          <div class="cert-body-text">Настоящий сертификат подтверждает, что<br><strong>_________________________</strong><br>прошёл полный курс подготовки оператора БПЛА<br>и имеет право на управление беспилотными ЛА</div>
-          <div class="cert-footer">
-            <div>Центр БПЛА «СВОин»</div>
-            <div>МО РФ · Россия</div>
-          </div>
-          <div class="cert-seal">МО РФ</div>
-        </div>
-      </div>
-      <div class="cert-desc">
-        <h3 style="font-family:'Oswald',sans-serif;font-size:24px;color:var(--gold2);margin-bottom:16px;">Документ государственного образца</h3>
-        <ul style="display:flex;flex-direction:column;gap:14px;">
-          <li style="display:flex;gap:12px;align-items:flex-start;">
-            <span style="color:var(--gold2);font-size:18px;flex-shrink:0;">✓</span>
-            <span style="color:#dde;font-size:15px;">Признаётся всеми силовыми ведомствами Российской Федерации</span>
-          </li>
-          <li style="display:flex;gap:12px;align-items:flex-start;">
-            <span style="color:var(--gold2);font-size:18px;flex-shrink:0;">✓</span>
-            <span style="color:#dde;font-size:15px;">Подтверждает квалификацию оператора БПЛА</span>
-          </li>
-          <li style="display:flex;gap:12px;align-items:flex-start;">
-            <span style="color:var(--gold2);font-size:18px;flex-shrink:0;">✓</span>
-            <span style="color:#dde;font-size:15px;">Выдаётся после успешного прохождения квалификационного экзамена</span>
-          </li>
-          <li style="display:flex;gap:12px;align-items:flex-start;">
-            <span style="color:var(--gold2);font-size:18px;flex-shrink:0;">✓</span>
-            <span style="color:#dde;font-size:15px;">Бессрочный — действует на весь период службы</span>
-          </li>
-        </ul>
-        <div style="margin-top:28px;">
-          <a href="#form" class="btn-gold">ПОЛУЧИТЬ СЕРТИФИКАТ БЕСПЛАТНО</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PARTNERS ===== -->
-<section class="partners" id="partners">
-  <div class="container">
-    <h2 class="section-title">Наши <span>партнёры</span></h2>
-    <div class="gold-line"></div>
-    <div class="partners-grid">
-      <div class="partner-logo">
-        <div class="partner-emblem">⭐<br><span>МО РФ</span></div>
-        <div class="partner-name">Министерство обороны РФ</div>
-      </div>
-      <div class="partner-logo">
-        <div class="partner-emblem" style="background:#c0392b;">🛡️<br><span>РОСГВАРДИЯ</span></div>
-        <div class="partner-name">Федеральная служба войск национальной гвардии</div>
-      </div>
-      <div class="partner-logo">
-        <div class="partner-emblem" style="background:#1a5276;">🏛️<br><span>ФСБ</span></div>
-        <div class="partner-name">Федеральная служба безопасности</div>
-      </div>
-      <div class="partner-logo">
-        <div class="partner-emblem" style="background:#1e8449;">🏅<br><span>ДОСААФ</span></div>
-        <div class="partner-name">ДОСААФ России</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="faq" id="faq">
-  <div class="container">
-    <h2 class="section-title">Часто задаваемые <span>вопросы</span></h2>
-    <div class="gold-line"></div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Сколько стоит обучение на оператора БПЛА?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Обучение полностью <strong>бесплатное</strong>. Все расходы берёт на себя государство. Вы не платите ни копейки — ни за теорию, ни за практику, ни за экзамен и сертификат.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Нужен ли опыт управления БПЛА или военная подготовка?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Нет. Мы обучаем с нуля. Никакого предыдущего опыта управления дронами не требуется. Достаточно быть гражданином РФ, иметь среднее образование и пройти медицинскую комиссию.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Принимают ли БПЛА в ближайшее время?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Набор ведётся постоянно. Места ограничены — в каждой группе не более 20 человек. Чтобы гарантированно попасть в ближайший поток, оставьте заявку прямо сейчас.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Когда выплачивается единовременная выплата?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Единовременная выплата до 4 400 000 руб. поступает на ваш счёт в течение 30 дней после подписания контракта с МО РФ. Никаких задержек — это гарантировано законодательством.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Можно ли пройти обучение в своём регионе?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Да. У нас есть учебные центры в большинстве регионов России. При подаче заявки наш менеджер подберёт ближайший к вам учебный пункт.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Что будет с семьёй во время службы?
-          <span class="faq-arrow">›</span>
-        </button>
-        <div class="faq-a">
-          <p>Семья военнослужащего получает полный социальный пакет: бесплатная медицина, льготный проезд, приоритетное место в детском саду и школе, санаторно-курортное лечение.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS для этапа 3 -->
-<style>
-  /* PAYMENTS */
-  .payments {
-    padding: 70px 0;
-    background: var(--navy2);
-  }
-  .payments-tabs {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .pay-tab {
-    background: transparent;
-    border: 1px solid rgba(201,162,39,0.4);
-    color: var(--gray);
-    font-family: 'Oswald', sans-serif;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: all 0.2s;
-  }
-  .pay-tab.active, .pay-tab:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: #0a1628;
-    font-weight: 700;
-  }
-  .payments-list { display: flex; flex-direction: column; gap: 14px; }
-  .pay-item {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    background: linear-gradient(135deg, #112347, #0d1b3c);
-    border: 1px solid rgba(201,162,39,0.15);
-    border-left: 4px solid var(--gold);
-    border-radius: 6px;
-    padding: 18px 22px;
-    transition: all 0.3s;
-  }
-  .pay-item:hover { border-color: var(--gold); transform: translateX(4px); }
-  .pay-icon { font-size: 28px; flex-shrink: 0; }
-  .pay-body { flex: 1; }
-  .pay-title { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 4px; }
-  .pay-note { font-size: 12px; color: var(--gray); }
-  .pay-amount {
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--gold2);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* FEDERAL */
-  .federal {
-    padding: 70px 0;
-    background: var(--navy);
-  }
-  .federal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-  }
-  .fed-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: linear-gradient(135deg, #112347, #0d1b3c);
-    border: 1px solid rgba(201,162,39,0.15);
-    border-radius: 8px;
-    padding: 18px 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .fed-item:hover {
-    border-color: var(--gold);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
-  .fed-icon { font-size: 28px; flex-shrink: 0; }
-  .fed-text { flex: 1; }
-  .fed-text strong { display: block; color: #fff; font-size: 14px; margin-bottom: 4px; }
-  .fed-text span { font-size: 12px; color: var(--gray); line-height: 1.5; }
-  .fed-arrow { color: var(--gold2); font-size: 24px; font-weight: 700; flex-shrink: 0; }
-
-  /* PUTIN */
-  .putin-section {
-    padding: 70px 0;
-    background: linear-gradient(135deg, #0a1628, #112347);
-    border-top: 2px solid rgba(201,162,39,0.3);
-    border-bottom: 2px solid rgba(201,162,39,0.3);
-  }
-  .putin-inner {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-  }
-  @media (max-width: 768px) {
-    .putin-inner { flex-direction: column; align-items: center; }
-  }
-  .putin-photo { flex-shrink: 0; text-align: center; }
-  .putin-quote { flex: 1; }
-  .quote-mark {
-    font-size: 80px;
-    color: var(--gold);
-    line-height: 0.6;
-    margin-bottom: 20px;
-    font-family: Georgia, serif;
-  }
-  .quote-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #ccd;
-    font-style: italic;
-  }
-  .quote-signature {
-    margin-top: 24px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--gold2);
-  }
-
-  /* CERTIFICATE */
-  .certificate {
-    padding: 70px 0;
-    background: var(--navy2);
-  }
-  .cert-inner {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-  }
-  @media (max-width: 768px) {
-    .cert-inner { flex-direction: column; }
-  }
-  .cert-img-wrap { flex-shrink: 0; }
-  .cert-mock {
-    width: 280px;
-    min-height: 360px;
-    background: linear-gradient(145deg, #f5f0e0, #e8ddb5);
-    border: 4px solid var(--gold);
-    border-radius: 8px;
-    padding: 24px 20px;
-    color: #1a1a2e;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-  }
-  .cert-header-bar {
-    font-size: 10px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 10px;
-  }
-  .cert-emblem { font-size: 40px; margin: 8px 0; }
-  .cert-title-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #1a1a2e;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-  }
-  .cert-subtitle-text { font-size: 11px; color: #333; margin-bottom: 16px; }
-  .cert-body-text { font-size: 12px; color: #333; line-height: 1.7; }
-  .cert-footer {
-    margin-top: 16px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    color: #555;
-  }
-  .cert-seal {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border: 3px solid rgba(192,57,43,0.5);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-    color: rgba(192,57,43,0.6);
-    transform: rotate(-15deg);
-  }
-
-  /* PARTNERS */
-  .partners {
-    padding: 60px 0;
-    background: var(--navy);
-  }
-  .partners-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .partner-logo {
-    text-align: center;
-    width: 180px;
-  }
-  .partner-emblem {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #0d3b7a, #1a5276);
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin: 0 auto 12px;
-    color: #fff;
-  }
-  .partner-emblem span { font-size: 9px; letter-spacing: 1px; font-weight: 700; margin-top: 2px; }
-  .partner-name { font-size: 12px; color: var(--gray); line-height: 1.4; }
-
-  /* FAQ */
-  .faq {
-    padding: 70px 0;
-    background: var(--navy2);
-  }
-  .faq-list { display: flex; flex-direction: column; gap: 10px; max-width: 900px; margin: 0 auto; }
-  .faq-item {
-    border: 1px solid rgba(201,162,39,0.2);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .faq-q {
-    width: 100%;
-    background: linear-gradient(135deg, #112347, #0d1b3c);
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: left;
-    padding: 18px 22px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    transition: background 0.2s;
-  }
-  .faq-q:hover { background: linear-gradient(135deg, #1a3566, #112347); }
-  .faq-q.open { color: var(--gold2); }
-  .faq-arrow { font-size: 22px; transition: transform 0.3s; flex-shrink: 0; }
-  .faq-q.open .faq-arrow { transform: rotate(90deg); }
-  .faq-a {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s;
-    background: #0a1628;
-  }
-  .faq-a.open {
-    max-height: 300px;
-    padding: 18px 22px;
-  }
-  .faq-a p { color: var(--gray); font-size: 14px; line-height: 1.7; }
-  .faq-a strong { color: var(--gold2); }
-</style>
-
-<!-- ===== REVIEWS ===== -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <h2 class="section-title">Отзывы наших <span>выпускников</span></h2>
-    <div class="gold-line"></div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">АК</div>
-          <div>
-            <div class="review-name">Алексей Кириллов</div>
-            <div class="review-meta">Оператор БПЛА, г. Воронеж</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Долго сомневался, но в итоге решился. Обучение прошло быстро — за 2 недели освоил управление дроном с нуля. Инструкторы профессиональные, всё объяснили. Контракт подписал, выплату получил вовремя. Доволен на все 100%.
-        </div>
-        <div class="review-date">Март 2024</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar" style="background:var(--red);">ДС</div>
-          <div>
-            <div class="review-name">Дмитрий Смирнов</div>
-            <div class="review-meta">Сержант запаса, г. Казань</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Служил раньше, но операторов БПЛА в моё время не было. Решил пройти переподготовку. Центр помог со всеми документами, организовал медкомиссию. Единовременная выплата пришла через 25 дней после подписания контракта.
-        </div>
-        <div class="review-date">Январь 2024</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar" style="background:#1e8449;">ИВ</div>
-          <div>
-            <div class="review-name">Иван Волков</div>
-            <div class="review-meta">Без военного опыта, г. Ростов-на-Дону</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Никогда не был в армии, думал не возьмут. Менеджеры объяснили, что требования минимальные. Прошёл обучение, сдал экзамен, получил сертификат. Теперь служу оператором — денежное довольствие хорошее, семья обеспечена.
-        </div>
-        <div class="review-date">Февраль 2024</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar" style="background:#8e44ad;">МП</div>
-          <div>
-            <div class="review-name">Михаил Петров</div>
-            <div class="review-meta">IT-специалист, г. Екатеринбург</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Работал программистом, но решил сменить сферу. Техническое образование помогло быстро освоить теорию. На практике освоил несколько видов БПЛА. Сертификат получил, контракт подписан. Рекомендую всем, кто хочет служить Родине.
-        </div>
-        <div class="review-date">Апрель 2024</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar" style="background:#2e86c1;">НА</div>
-          <div>
-            <div class="review-name">Николай Андреев</div>
-            <div class="review-meta">Водитель, г. Самара</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Сначала не верил, что выплата такая большая. Но менеджер объяснил все детали, показал документы. После обучения и подписания контракта получил выплату в полном объёме. Доволен, что решился — не пожалел ни разу.
-        </div>
-        <div class="review-date">Декабрь 2023</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar" style="background:#d35400;">РЗ</div>
-          <div>
-            <div class="review-name">Роман Захаров</div>
-            <div class="review-meta">Физрук, г. Новосибирск</div>
-            <div class="review-stars">★★★★★</div>
-          </div>
-        </div>
-        <div class="review-text">
-          Физическая подготовка хорошая, с теорией пришлось поработать. Инструкторы помогли разобраться в технической части. Курс прошёл за 2,5 недели. Сейчас служу, доволен коллективом и условиями. Всем советую!
-        </div>
-        <div class="review-date">Ноябрь 2023</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MARQUIZ ===== -->
-<section class="marquiz-section" id="marquiz">
-  <div class="container">
-    <h2 class="section-title">Узнайте, <span>подходите ли вы</span> для службы</h2>
-    <div class="gold-line"></div>
-    <p class="section-subtitle">Пройдите короткий тест из 3 вопросов и получите персональное предложение</p>
-    <div class="marquiz-widget">
-      <div class="mq-progress-bar">
-        <div class="mq-progress-fill" id="mqProgress" style="width:33%"></div>
-      </div>
-      <div class="mq-step-label">Вопрос <span id="mqCurrent">1</span> из 3</div>
-
-      <!-- Step 1 -->
-      <div class="mq-step active" id="mqStep1">
-        <div class="mq-question">Какой у вас возраст?</div>
-        <div class="mq-options">
-          <button class="mq-opt" onclick="mqNext(1,'18–25 лет')">18–25 лет</button>
-          <button class="mq-opt" onclick="mqNext(1,'26–35 лет')">26–35 лет</button>
-          <button class="mq-opt" onclick="mqNext(1,'36–45 лет')">36–45 лет</button>
-          <button class="mq-opt" onclick="mqNext(1,'46–60 лет')">46–60 лет</button>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="mq-step" id="mqStep2">
-        <div class="mq-question">Есть ли у вас военный билет или военный учёт?</div>
-        <div class="mq-options">
-          <button class="mq-opt" onclick="mqNext(2,'Да, есть')">Да, есть</button>
-          <button class="mq-opt" onclick="mqNext(2,'Нет военного билета')">Нет военного билета</button>
-          <button class="mq-opt" onclick="mqNext(2,'Нахожусь в запасе')">Нахожусь в запасе</button>
-          <button class="mq-opt" onclick="mqNext(2,'Не уверен')">Не уверен</button>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="mq-step" id="mqStep3">
-        <div class="mq-question">Когда вы готовы начать обучение?</div>
-        <div class="mq-options">
-          <button class="mq-opt" onclick="mqNext(3,'Как можно скорее')">Как можно скорее</button>
-          <button class="mq-opt" onclick="mqNext(3,'В течение месяца')">В течение месяца</button>
-          <button class="mq-opt" onclick="mqNext(3,'Через 2–3 месяца')">Через 2–3 месяца</button>
-          <button class="mq-opt" onclick="mqNext(3,'Пока изучаю')">Пока изучаю</button>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div class="mq-step" id="mqResult">
-        <div class="mq-result-icon">✅</div>
-        <div class="mq-result-title">Вы подходите для обучения!</div>
-        <div class="mq-result-text">По результатам теста вы соответствуете требованиям. Оставьте контакты, и наш специалист свяжется с вами в течение 15 минут.</div>
-        <a href="#form" class="btn-red" style="margin-top:24px;display:inline-block;">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FORM ===== -->
-<section class="form-section" id="form">
-  <div class="container">
-    <div class="form-inner">
-      <div class="form-left">
-        <h2 class="section-title" style="text-align:left;">Оставьте заявку, и мы<br>свяжемся с вами <span>в ближайшее время</span></h2>
-        <div class="gold-line" style="margin-left:0;"></div>
-        <div class="form-perks">
-          <div class="form-perk">
-            <span class="perk-icon">⏱️</span>
-            <span>Перезвоним в течение <strong>15 минут</strong></span>
-          </div>
-          <div class="form-perk">
-            <span class="perk-icon">🆓</span>
-            <span>Консультация абсолютно <strong>бесплатна</strong></span>
-          </div>
-          <div class="form-perk">
-            <span class="perk-icon">📋</span>
-            <span>Поможем собрать все необходимые <strong>документы</strong></span>
-          </div>
-          <div class="form-perk">
-            <span class="perk-icon">📍</span>
-            <span>Подберём ближайший учебный центр <strong>в вашем регионе</strong></span>
-          </div>
-        </div>
-        <div class="form-contacts">
-          <div><span>📞</span> <a href="tel:+79600002576" style="color:var(--gold2);">8 960 000-25-76</a></div>
-          <div><span>📧</span> <a href="mailto:info@bpla-svo.online" style="color:var(--gold2);">info@bpla-svo.online</a></div>
-        </div>
-      </div>
-      <div class="form-right">
-        <form class="application-form" id="appForm" onsubmit="submitForm(event)" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Имя <span class="req">*</span></label>
-              <input type="text" name="name" class="form-input" placeholder="Ваше имя" minlength="2" required />
-              <div class="form-error" id="err-name"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Фамилия <span class="req">*</span></label>
-              <input type="text" name="lastname" class="form-input" placeholder="Ваша фамилия" minlength="2" required />
-              <div class="form-error" id="err-lastname"></div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Телефон <span class="req">*</span></label>
-              <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required />
-              <div class="form-error" id="err-phone"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email <span class="req">*</span></label>
-              <input type="email" name="email" class="form-input" placeholder="example@mail.ru" required />
-              <div class="form-error" id="err-email"></div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Город <span class="req">*</span></label>
-              <input type="text" name="city" class="form-input" placeholder="Ваш город" required minlength="2" />
-              <div class="form-error" id="err-city"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Дата рождения <span class="req">*</span></label>
-              <input type="date" name="birthdate" class="form-input" required />
-              <div class="form-error" id="err-birthdate"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Серия и номер паспорта <span class="req">*</span></label>
-            <input type="text" name="passport" class="form-input" placeholder="0000 000000" maxlength="11" required />
-            <div class="form-error" id="err-passport"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">ОГРН <span class="req">*</span>
-                <span class="field-hint" title="Введите ОГРН в формате, указанном в документах">ℹ️</span>
-              </label>
-              <input type="text" name="ogrn" class="form-input" placeholder="Введите ОГРН (19 цифр)" minlength="19" maxlength="19" pattern="[0-9]{19}" required />
-              <div class="form-hint">Укажите ОГРН согласно документам — 19 цифр</div>
-              <div class="form-error" id="err-ogrn"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">ОКПО <span class="req">*</span>
-                <span class="field-hint" title="Введите ОКПО в формате, указанном в документах">ℹ️</span>
-              </label>
-              <input type="text" name="okpo" class="form-input" placeholder="Введите ОКПО (14 цифр)" minlength="14" maxlength="14" pattern="[0-9]{14}" required />
-              <div class="form-hint">Укажите ОКПО согласно документам — 14 цифр</div>
-              <div class="form-error" id="err-okpo"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Наличие военного билета <span class="req">*</span></label>
-            <select name="military" class="form-input" required>
-              <option value="">— Выберите вариант —</option>
-              <option value="yes">Есть военный билет</option>
-              <option value="reserve">Нахожусь в запасе</option>
-              <option value="no">Нет военного билета</option>
-              <option value="not_sure">Не уверен</option>
-            </select>
-            <div class="form-error" id="err-military"></div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Комментарий</label>
-            <textarea name="comment" class="form-input" rows="3" placeholder="Дополнительная информация (необязательно)"></textarea>
-          </div>
-          <div class="form-agree">
-            <input type="checkbox" id="agreeCheck" name="agree" required />
-            <label for="agreeCheck">
-              Нажимая кнопку, я соглашаюсь с
-              <a href="#" style="color:var(--gold2);">политикой конфиденциальности</a>
-              и даю согласие на обработку персональных данных
-            </label>
-          </div>
-          <div class="form-error" id="err-agree"></div>
-          <button type="submit" class="btn-red form-submit">ОТПРАВИТЬ ЗАЯВКУ</button>
-          <div id="formSuccess" class="form-success" style="display:none;">
-            ✅ Заявка отправлена! Мы свяжемся с вами в течение 15 минут.
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer-bottom">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <div class="logo-icon" style="width:40px;height:40px;font-size:12px;">БПЛА</div>
-        <div>
-          <div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;">Центр БПЛА «СВОин»</div>
-          <div style="font-size:12px;color:var(--gray);">© 2024 Все права защищены</div>
-        </div>
-      </div>
-      <div class="footer-links">
-        <a href="#" style="color:var(--gray);font-size:13px;">Политика конфиденциальности</a>
-        <a href="#" style="color:var(--gray);font-size:13px;">Пользовательское соглашение</a>
-        <a href="#" style="color:var(--gray);font-size:13px;">Реквизиты</a>
-      </div>
-      <div style="font-size:12px;color:var(--gray);text-align:right;line-height:1.6;">
-        <div>8 960 000-25-76</div>
-        <div>info@bpla-svo.online</div>
-        <div>Россия, все регионы</div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:#555;line-height:1.6;">
-      Сайт носит информационный характер. Все выплаты производятся в соответствии с Федеральным законом №53-ФЗ «О воинской обязанности и военной службе» и приказами МО РФ.
-    </div>
-  </div>
-</footer>
-
-<!-- CSS для этапа 4 -->
-<style>
-  /* REVIEWS */
-  .reviews {
-    padding: 70px 0;
-    background: var(--navy);
-  }
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .review-card {
-    background: linear-gradient(145deg, #112347, #0d1b3c);
-    border: 1px solid rgba(201,162,39,0.2);
-    border-radius: 8px;
-    padding: 22px 20px;
-    transition: all 0.3s;
-  }
-  .review-card:hover {
-    border-color: rgba(201,162,39,0.5);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-  }
-  .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-  .review-avatar {
-    width: 46px;
-    height: 46px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #0a1628;
-    flex-shrink: 0;
-  }
-  .review-name { font-weight: 700; font-size: 15px; color: #fff; }
-  .review-meta { font-size: 12px; color: var(--gray); margin-top: 2px; }
-  .review-stars { color: var(--gold2); font-size: 14px; margin-top: 3px; letter-spacing: 2px; }
-  .review-text { font-size: 13px; color: #ccd; line-height: 1.7; }
-  .review-date { font-size: 11px; color: var(--gray); margin-top: 12px; text-align: right; }
-
-  /* MARQUIZ */
-  .marquiz-section {
-    padding: 70px 0;
-    background: var(--navy2);
-  }
-  .marquiz-widget {
-    max-width: 700px;
-    margin: 0 auto;
-    background: linear-gradient(145deg, #112347, #0d1b3c);
-    border: 2px solid rgba(201,162,39,0.3);
-    border-radius: 12px;
-    padding: 36px 40px;
-  }
-  .mq-progress-bar {
-    height: 6px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 3px;
-    margin-bottom: 12px;
-    overflow: hidden;
-  }
-  .mq-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--gold), var(--gold2));
-    border-radius: 3px;
-    transition: width 0.5s ease;
-  }
-  .mq-step-label { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
-  .mq-step { display: none; }
-  .mq-step.active { display: block; }
-  .mq-question {
-    font-family: 'Oswald', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 24px;
-  }
-  .mq-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  @media (max-width: 500px) {
-    .mq-options { grid-template-columns: 1fr; }
-    .marquiz-widget { padding: 24px 20px; }
-  }
-  .mq-opt {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,162,39,0.3);
-    color: #dde;
-    font-size: 15px;
-    padding: 16px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.2s;
-  }
-  .mq-opt:hover {
-    background: rgba(201,162,39,0.15);
-    border-color: var(--gold2);
-    color: #fff;
-  }
-  .mq-result-icon { font-size: 60px; text-align: center; margin-bottom: 16px; }
-  .mq-result-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--gold2);
-    text-align: center;
-    margin-bottom: 14px;
-  }
-  .mq-result-text { text-align: center; color: #ccd; font-size: 15px; line-height: 1.7; }
-
-  /* FORM */
-  .form-section {
-    padding: 70px 0;
-    background: linear-gradient(135deg, #0a1628, #112347);
-    border-top: 3px solid var(--gold);
-  }
-  .form-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 60px;
-    align-items: start;
-  }
-  @media (max-width: 900px) {
-    .form-inner { grid-template-columns: 1fr; gap: 40px; }
-  }
-  .form-perks { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
-  .form-perk {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    color: #ccd;
-    line-height: 1.5;
-  }
-  .perk-icon { font-size: 20px; flex-shrink: 0; }
-  .form-contacts { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: #dde; }
-  .form-contacts div { display: flex; align-items: center; gap: 10px; }
-
-  .application-form {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(201,162,39,0.2);
-    border-radius: 10px;
-    padding: 32px;
-  }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 600px) {
-    .form-row { grid-template-columns: 1fr; }
-  }
-  .form-group { margin-bottom: 16px; }
-  .form-label {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: #bbc;
-    margin-bottom: 6px;
-  }
-  .req { color: var(--red2); }
-  .form-input {
-    width: 100%;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(201,162,39,0.2);
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    padding: 11px 14px;
-    transition: border-color 0.2s;
-    outline: none;
-  }
-  .form-input::placeholder { color: #556; }
-  .form-input:focus { border-color: var(--gold2); background: rgba(255,255,255,0.09); }
-  .form-input.invalid { border-color: var(--red2); }
-  .form-input option { background: #0d1b3c; color: #fff; }
-  .form-error { font-size: 12px; color: var(--red2); margin-top: 4px; min-height: 16px; }
-  .form-hint { font-size: 11px; color: var(--gray); margin-top: 3px; }
-  .field-hint { cursor: help; font-size: 13px; margin-left: 4px; }
-
-  .form-agree {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 6px;
-    font-size: 12px;
-    color: var(--gray);
-    line-height: 1.5;
-  }
-  .form-agree input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: var(--gold2); }
-  .form-submit {
-    width: 100%;
-    font-size: 17px;
-    padding: 16px;
-    margin-top: 16px;
-    letter-spacing: 2px;
-  }
-  .form-success {
-    margin-top: 16px;
-    padding: 16px;
-    background: rgba(30,132,73,0.2);
-    border: 1px solid rgba(30,132,73,0.5);
-    border-radius: 6px;
-    color: #2ecc71;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  /* FOOTER */
-  .site-footer-bottom {
-    background: #060e1c;
-    border-top: 2px solid rgba(201,162,39,0.3);
-    padding: 40px 0 20px;
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .footer-logo { display: flex; align-items: center; gap: 12px; }
-  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .header-nav { display: none; }
-    .header-contacts .btn-red { display: none; }
-    .header-phone { font-size: 15px; }
-    .cert-inner { flex-direction: column; align-items: center; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-    .footer-links { flex-direction: column; gap: 10px; }
-  }
-</style>
-
-<!-- ===== JS: STICKY HEADER ===== -->
 <script>
-  // ── Sticky header ──────────────────────────────────────
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // ── FAQ accordion ──────────────────────────────────────
-  function toggleFaq(btn) {
-    const answer = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-q.open').forEach(q => {
-      q.classList.remove('open');
-      q.nextElementSibling.classList.remove('open');
-    });
-    if (!isOpen) {
-      btn.classList.add('open');
-      answer.classList.add('open');
-    }
-  }
-
-  // ── Marquiz ────────────────────────────────────────────
-  const mqAnswers = {};
-  function mqNext(step, answer) {
-    mqAnswers['step' + step] = answer;
-    const nextStep = step + 1;
-    document.getElementById('mqStep' + step).classList.remove('active');
-    const nextEl = step < 3
-      ? document.getElementById('mqStep' + nextStep)
-      : document.getElementById('mqResult');
-    if (nextEl) nextEl.classList.add('active');
-    const pct = step < 3 ? ((step + 1) / 3 * 100) : 100;
-    document.getElementById('mqProgress').style.width = pct + '%';
-    if (step < 3) {
-      document.getElementById('mqCurrent').textContent = nextStep;
-    }
-  }
-
-  // ── Phone mask ─────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded', () => {
-    const phoneInput = document.querySelector('input[name="phone"]');
-    if (phoneInput) {
-      phoneInput.addEventListener('input', function () {
-        let v = this.value.replace(/\D/g, '');
-        if (v.startsWith('8')) v = '7' + v.slice(1);
-        if (!v.startsWith('7')) v = '7' + v;
-        v = v.slice(0, 11);
-        let formatted = '+7';
-        if (v.length > 1) formatted += ' (' + v.slice(1, 4);
-        if (v.length >= 4) formatted += ') ' + v.slice(4, 7);
-        if (v.length >= 7) formatted += '-' + v.slice(7, 9);
-        if (v.length >= 9) formatted += '-' + v.slice(9, 11);
-        this.value = formatted;
-      });
-    }
-
-    // Passport mask
-    const passportInput = document.querySelector('input[name="passport"]');
-    if (passportInput) {
-      passportInput.addEventListener('input', function () {
-        let v = this.value.replace(/\D/g, '').slice(0, 10);
-        if (v.length > 4) v = v.slice(0, 4) + ' ' + v.slice(4);
-        this.value = v;
-      });
-    }
-
-    // Digits-only for ogrn & okpo
-    ['ogrn', 'okpo'].forEach(name => {
-      const el = document.querySelector('input[name="' + name + '"]');
-      if (el) {
-        el.addEventListener('input', function () {
-          this.value = this.value.replace(/\D/g, '');
-        });
-      }
-    });
-  });
-
-  // ── Form validation ────────────────────────────────────
-  function showError(id, msg) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = msg;
-  }
-  function clearErrors() {
-    document.querySelectorAll('.form-error').forEach(e => e.textContent = '');
-    document.querySelectorAll('.form-input.invalid').forEach(e => e.classList.remove('invalid'));
-  }
-  function markInvalid(name) {
-    const el = document.querySelector('[name="' + name + '"]');
-    if (el) el.classList.add('invalid');
-  }
-
-  function submitForm(e) {
-    e.preventDefault();
-    clearErrors();
-    const f = e.target;
-    let valid = true;
-
-    const name = f.name.value.trim();
-    if (!name || name.length < 2) {
-      showError('err-name', 'Введите имя (минимум 2 символа)');
-      markInvalid('name'); valid = false;
-    }
-
-    const lastname = f.lastname.value.trim();
-    if (!lastname || lastname.length < 2) {
-      showError('err-lastname', 'Введите фамилию (минимум 2 символа)');
-      markInvalid('lastname'); valid = false;
-    }
-
-    const phone = f.phone.value.trim();
-    const phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 11) {
-      showError('err-phone', 'Введите корректный номер телефона');
-      markInvalid('phone'); valid = false;
-    }
-
-    const email = f.email.value.trim();
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError('err-email', 'Введите корректный email');
-      markInvalid('email'); valid = false;
-    }
-
-    const city = f.city.value.trim();
-    if (!city || city.length < 2) {
-      showError('err-city', 'Введите город');
-      markInvalid('city'); valid = false;
-    }
-
-    const birthdate = f.birthdate.value;
-    if (!birthdate) {
-      showError('err-birthdate', 'Укажите дату рождения');
-      markInvalid('birthdate'); valid = false;
-    } else {
-      const age = new Date().getFullYear() - new Date(birthdate).getFullYear();
-      if (age < 18 || age > 60) {
-        showError('err-birthdate', 'Возраст должен быть от 18 до 60 лет');
-        markInvalid('birthdate'); valid = false;
-      }
-    }
-
-    const passport = f.passport.value.replace(/\s/g, '');
-    if (passport.length !== 10 || !/^\d{10}$/.test(passport)) {
-      showError('err-passport', 'Введите серию (4 цифры) и номер (6 цифр) паспорта');
-      markInvalid('passport'); valid = false;
-    }
-
-    const ogrn = f.ogrn.value.trim();
-    if (!ogrn || ogrn.length !== 19 || !/^\d{19}$/.test(ogrn)) {
-      showError('err-ogrn', 'ОГРН должен содержать ровно 19 цифр');
-      markInvalid('ogrn'); valid = false;
-    }
-
-    const okpo = f.okpo.value.trim();
-    if (!okpo || okpo.length !== 14 || !/^\d{14}$/.test(okpo)) {
-      showError('err-okpo', 'ОКПО должен содержать ровно 14 цифр');
-      markInvalid('okpo'); valid = false;
-    }
-
-    const military = f.military.value;
-    if (!military) {
-      showError('err-military', 'Выберите один из вариантов');
-      markInvalid('military'); valid = false;
-    }
-
-    if (!f.agree.checked) {
-      showError('err-agree', 'Необходимо согласие на обработку данных');
-      valid = false;
-    }
-
-    if (valid) {
-      document.getElementById('formSuccess').style.display = 'block';
-      f.reset();
-      f.querySelector('.form-submit').disabled = true;
-      f.querySelector('.form-submit').textContent = 'ЗАЯВКА ОТПРАВЛЕНА ✓';
-      setTimeout(() => {
-        f.querySelector('.form-submit').disabled = false;
-        f.querySelector('.form-submit').textContent = 'ОТПРАВИТЬ ЗАЯВКУ';
-        document.getElementById('formSuccess').style.display = 'none';
-      }, 6000);
-    }
-  }
+const hdr = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 50));
 </script>
-
 </body>
 </html>
