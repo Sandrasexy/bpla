@@ -1425,15 +1425,557 @@
   .faq-a strong { color: var(--gold2); }
 </style>
 
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="section-title">Отзывы наших <span>выпускников</span></h2>
+    <div class="gold-line"></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">АК</div>
+          <div>
+            <div class="review-name">Алексей Кириллов</div>
+            <div class="review-meta">Оператор БПЛА, г. Воронеж</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Долго сомневался, но в итоге решился. Обучение прошло быстро — за 2 недели освоил управление дроном с нуля. Инструкторы профессиональные, всё объяснили. Контракт подписал, выплату получил вовремя. Доволен на все 100%.
+        </div>
+        <div class="review-date">Март 2024</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:var(--red);">ДС</div>
+          <div>
+            <div class="review-name">Дмитрий Смирнов</div>
+            <div class="review-meta">Сержант запаса, г. Казань</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Служил раньше, но операторов БПЛА в моё время не было. Решил пройти переподготовку. Центр помог со всеми документами, организовал медкомиссию. Единовременная выплата пришла через 25 дней после подписания контракта.
+        </div>
+        <div class="review-date">Январь 2024</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:#1e8449;">ИВ</div>
+          <div>
+            <div class="review-name">Иван Волков</div>
+            <div class="review-meta">Без военного опыта, г. Ростов-на-Дону</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Никогда не был в армии, думал не возьмут. Менеджеры объяснили, что требования минимальные. Прошёл обучение, сдал экзамен, получил сертификат. Теперь служу оператором — денежное довольствие хорошее, семья обеспечена.
+        </div>
+        <div class="review-date">Февраль 2024</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:#8e44ad;">МП</div>
+          <div>
+            <div class="review-name">Михаил Петров</div>
+            <div class="review-meta">IT-специалист, г. Екатеринбург</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Работал программистом, но решил сменить сферу. Техническое образование помогло быстро освоить теорию. На практике освоил несколько видов БПЛА. Сертификат получил, контракт подписан. Рекомендую всем, кто хочет служить Родине.
+        </div>
+        <div class="review-date">Апрель 2024</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:#2e86c1;">НА</div>
+          <div>
+            <div class="review-name">Николай Андреев</div>
+            <div class="review-meta">Водитель, г. Самара</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Сначала не верил, что выплата такая большая. Но менеджер объяснил все детали, показал документы. После обучения и подписания контракта получил выплату в полном объёме. Доволен, что решился — не пожалел ни разу.
+        </div>
+        <div class="review-date">Декабрь 2023</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background:#d35400;">РЗ</div>
+          <div>
+            <div class="review-name">Роман Захаров</div>
+            <div class="review-meta">Физрук, г. Новосибирск</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="review-text">
+          Физическая подготовка хорошая, с теорией пришлось поработать. Инструкторы помогли разобраться в технической части. Курс прошёл за 2,5 недели. Сейчас служу, доволен коллективом и условиями. Всем советую!
+        </div>
+        <div class="review-date">Ноябрь 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUIZ ===== -->
+<section class="marquiz-section" id="marquiz">
+  <div class="container">
+    <h2 class="section-title">Узнайте, <span>подходите ли вы</span> для службы</h2>
+    <div class="gold-line"></div>
+    <p class="section-subtitle">Пройдите короткий тест из 3 вопросов и получите персональное предложение</p>
+    <div class="marquiz-widget">
+      <div class="mq-progress-bar">
+        <div class="mq-progress-fill" id="mqProgress" style="width:33%"></div>
+      </div>
+      <div class="mq-step-label">Вопрос <span id="mqCurrent">1</span> из 3</div>
+
+      <!-- Step 1 -->
+      <div class="mq-step active" id="mqStep1">
+        <div class="mq-question">Какой у вас возраст?</div>
+        <div class="mq-options">
+          <button class="mq-opt" onclick="mqNext(1,'18–25 лет')">18–25 лет</button>
+          <button class="mq-opt" onclick="mqNext(1,'26–35 лет')">26–35 лет</button>
+          <button class="mq-opt" onclick="mqNext(1,'36–45 лет')">36–45 лет</button>
+          <button class="mq-opt" onclick="mqNext(1,'46–60 лет')">46–60 лет</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="mq-step" id="mqStep2">
+        <div class="mq-question">Есть ли у вас военный билет или военный учёт?</div>
+        <div class="mq-options">
+          <button class="mq-opt" onclick="mqNext(2,'Да, есть')">Да, есть</button>
+          <button class="mq-opt" onclick="mqNext(2,'Нет военного билета')">Нет военного билета</button>
+          <button class="mq-opt" onclick="mqNext(2,'Нахожусь в запасе')">Нахожусь в запасе</button>
+          <button class="mq-opt" onclick="mqNext(2,'Не уверен')">Не уверен</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="mq-step" id="mqStep3">
+        <div class="mq-question">Когда вы готовы начать обучение?</div>
+        <div class="mq-options">
+          <button class="mq-opt" onclick="mqNext(3,'Как можно скорее')">Как можно скорее</button>
+          <button class="mq-opt" onclick="mqNext(3,'В течение месяца')">В течение месяца</button>
+          <button class="mq-opt" onclick="mqNext(3,'Через 2–3 месяца')">Через 2–3 месяца</button>
+          <button class="mq-opt" onclick="mqNext(3,'Пока изучаю')">Пока изучаю</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="mq-step" id="mqResult">
+        <div class="mq-result-icon">✅</div>
+        <div class="mq-result-title">Вы подходите для обучения!</div>
+        <div class="mq-result-text">По результатам теста вы соответствуете требованиям. Оставьте контакты, и наш специалист свяжется с вами в течение 15 минут.</div>
+        <a href="#form" class="btn-red" style="margin-top:24px;display:inline-block;">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORM ===== -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-inner">
+      <div class="form-left">
+        <h2 class="section-title" style="text-align:left;">Оставьте заявку, и мы<br>свяжемся с вами <span>в ближайшее время</span></h2>
+        <div class="gold-line" style="margin-left:0;"></div>
+        <div class="form-perks">
+          <div class="form-perk">
+            <span class="perk-icon">⏱️</span>
+            <span>Перезвоним в течение <strong>15 минут</strong></span>
+          </div>
+          <div class="form-perk">
+            <span class="perk-icon">🆓</span>
+            <span>Консультация абсолютно <strong>бесплатна</strong></span>
+          </div>
+          <div class="form-perk">
+            <span class="perk-icon">📋</span>
+            <span>Поможем собрать все необходимые <strong>документы</strong></span>
+          </div>
+          <div class="form-perk">
+            <span class="perk-icon">📍</span>
+            <span>Подберём ближайший учебный центр <strong>в вашем регионе</strong></span>
+          </div>
+        </div>
+        <div class="form-contacts">
+          <div><span>📞</span> <a href="tel:+79600002576" style="color:var(--gold2);">8 960 000-25-76</a></div>
+          <div><span>📧</span> <a href="mailto:info@bpla-svo.online" style="color:var(--gold2);">info@bpla-svo.online</a></div>
+        </div>
+      </div>
+      <div class="form-right">
+        <form class="application-form" id="appForm" onsubmit="submitForm(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Имя <span class="req">*</span></label>
+              <input type="text" name="name" class="form-input" placeholder="Ваше имя" minlength="2" required />
+              <div class="form-error" id="err-name"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Фамилия <span class="req">*</span></label>
+              <input type="text" name="lastname" class="form-input" placeholder="Ваша фамилия" minlength="2" required />
+              <div class="form-error" id="err-lastname"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Телефон <span class="req">*</span></label>
+              <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required />
+              <div class="form-error" id="err-phone"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email <span class="req">*</span></label>
+              <input type="email" name="email" class="form-input" placeholder="example@mail.ru" required />
+              <div class="form-error" id="err-email"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Город <span class="req">*</span></label>
+              <input type="text" name="city" class="form-input" placeholder="Ваш город" required minlength="2" />
+              <div class="form-error" id="err-city"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Дата рождения <span class="req">*</span></label>
+              <input type="date" name="birthdate" class="form-input" required />
+              <div class="form-error" id="err-birthdate"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Серия и номер паспорта <span class="req">*</span></label>
+            <input type="text" name="passport" class="form-input" placeholder="0000 000000" maxlength="11" required />
+            <div class="form-error" id="err-passport"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">ОГРН <span class="req">*</span>
+                <span class="field-hint" title="Введите ОГРН в формате, указанном в документах">ℹ️</span>
+              </label>
+              <input type="text" name="ogrn" class="form-input" placeholder="Введите ОГРН (19 цифр)" minlength="19" maxlength="19" pattern="[0-9]{19}" required />
+              <div class="form-hint">Укажите ОГРН согласно документам — 19 цифр</div>
+              <div class="form-error" id="err-ogrn"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">ОКПО <span class="req">*</span>
+                <span class="field-hint" title="Введите ОКПО в формате, указанном в документах">ℹ️</span>
+              </label>
+              <input type="text" name="okpo" class="form-input" placeholder="Введите ОКПО (14 цифр)" minlength="14" maxlength="14" pattern="[0-9]{14}" required />
+              <div class="form-hint">Укажите ОКПО согласно документам — 14 цифр</div>
+              <div class="form-error" id="err-okpo"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Наличие военного билета <span class="req">*</span></label>
+            <select name="military" class="form-input" required>
+              <option value="">— Выберите вариант —</option>
+              <option value="yes">Есть военный билет</option>
+              <option value="reserve">Нахожусь в запасе</option>
+              <option value="no">Нет военного билета</option>
+              <option value="not_sure">Не уверен</option>
+            </select>
+            <div class="form-error" id="err-military"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Комментарий</label>
+            <textarea name="comment" class="form-input" rows="3" placeholder="Дополнительная информация (необязательно)"></textarea>
+          </div>
+          <div class="form-agree">
+            <input type="checkbox" id="agreeCheck" name="agree" required />
+            <label for="agreeCheck">
+              Нажимая кнопку, я соглашаюсь с
+              <a href="#" style="color:var(--gold2);">политикой конфиденциальности</a>
+              и даю согласие на обработку персональных данных
+            </label>
+          </div>
+          <div class="form-error" id="err-agree"></div>
+          <button type="submit" class="btn-red form-submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+          <div id="formSuccess" class="form-success" style="display:none;">
+            ✅ Заявка отправлена! Мы свяжемся с вами в течение 15 минут.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer-bottom">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-icon" style="width:40px;height:40px;font-size:12px;">БПЛА</div>
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;">Центр БПЛА «СВОин»</div>
+          <div style="font-size:12px;color:var(--gray);">© 2024 Все права защищены</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#" style="color:var(--gray);font-size:13px;">Политика конфиденциальности</a>
+        <a href="#" style="color:var(--gray);font-size:13px;">Пользовательское соглашение</a>
+        <a href="#" style="color:var(--gray);font-size:13px;">Реквизиты</a>
+      </div>
+      <div style="font-size:12px;color:var(--gray);text-align:right;line-height:1.6;">
+        <div>8 960 000-25-76</div>
+        <div>info@bpla-svo.online</div>
+        <div>Россия, все регионы</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:#555;line-height:1.6;">
+      Сайт носит информационный характер. Все выплаты производятся в соответствии с Федеральным законом №53-ФЗ «О воинской обязанности и военной службе» и приказами МО РФ.
+    </div>
+  </div>
+</footer>
+
+<!-- CSS для этапа 4 -->
+<style>
+  /* REVIEWS */
+  .reviews {
+    padding: 70px 0;
+    background: var(--navy);
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .review-card {
+    background: linear-gradient(145deg, #112347, #0d1b3c);
+    border: 1px solid rgba(201,162,39,0.2);
+    border-radius: 8px;
+    padding: 22px 20px;
+    transition: all 0.3s;
+  }
+  .review-card:hover {
+    border-color: rgba(201,162,39,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+  }
+  .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .review-avatar {
+    width: 46px;
+    height: 46px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #0a1628;
+    flex-shrink: 0;
+  }
+  .review-name { font-weight: 700; font-size: 15px; color: #fff; }
+  .review-meta { font-size: 12px; color: var(--gray); margin-top: 2px; }
+  .review-stars { color: var(--gold2); font-size: 14px; margin-top: 3px; letter-spacing: 2px; }
+  .review-text { font-size: 13px; color: #ccd; line-height: 1.7; }
+  .review-date { font-size: 11px; color: var(--gray); margin-top: 12px; text-align: right; }
+
+  /* MARQUIZ */
+  .marquiz-section {
+    padding: 70px 0;
+    background: var(--navy2);
+  }
+  .marquiz-widget {
+    max-width: 700px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #112347, #0d1b3c);
+    border: 2px solid rgba(201,162,39,0.3);
+    border-radius: 12px;
+    padding: 36px 40px;
+  }
+  .mq-progress-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .mq-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold2));
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+  .mq-step-label { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
+  .mq-step { display: none; }
+  .mq-step.active { display: block; }
+  .mq-question {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  .mq-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 500px) {
+    .mq-options { grid-template-columns: 1fr; }
+    .marquiz-widget { padding: 24px 20px; }
+  }
+  .mq-opt {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,162,39,0.3);
+    color: #dde;
+    font-size: 15px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+  }
+  .mq-opt:hover {
+    background: rgba(201,162,39,0.15);
+    border-color: var(--gold2);
+    color: #fff;
+  }
+  .mq-result-icon { font-size: 60px; text-align: center; margin-bottom: 16px; }
+  .mq-result-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold2);
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .mq-result-text { text-align: center; color: #ccd; font-size: 15px; line-height: 1.7; }
+
+  /* FORM */
+  .form-section {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #0a1628, #112347);
+    border-top: 3px solid var(--gold);
+  }
+  .form-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .form-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .form-perks { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+  .form-perk {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #ccd;
+    line-height: 1.5;
+  }
+  .perk-icon { font-size: 20px; flex-shrink: 0; }
+  .form-contacts { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: #dde; }
+  .form-contacts div { display: flex; align-items: center; gap: 10px; }
+
+  .application-form {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,162,39,0.2);
+    border-radius: 10px;
+    padding: 32px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #bbc;
+    margin-bottom: 6px;
+  }
+  .req { color: var(--red2); }
+  .form-input {
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,162,39,0.2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 11px 14px;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-input::placeholder { color: #556; }
+  .form-input:focus { border-color: var(--gold2); background: rgba(255,255,255,0.09); }
+  .form-input.invalid { border-color: var(--red2); }
+  .form-input option { background: #0d1b3c; color: #fff; }
+  .form-error { font-size: 12px; color: var(--red2); margin-top: 4px; min-height: 16px; }
+  .form-hint { font-size: 11px; color: var(--gray); margin-top: 3px; }
+  .field-hint { cursor: help; font-size: 13px; margin-left: 4px; }
+
+  .form-agree {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+  .form-agree input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: var(--gold2); }
+  .form-submit {
+    width: 100%;
+    font-size: 17px;
+    padding: 16px;
+    margin-top: 16px;
+    letter-spacing: 2px;
+  }
+  .form-success {
+    margin-top: 16px;
+    padding: 16px;
+    background: rgba(30,132,73,0.2);
+    border: 1px solid rgba(30,132,73,0.5);
+    border-radius: 6px;
+    color: #2ecc71;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .site-footer-bottom {
+    background: #060e1c;
+    border-top: 2px solid rgba(201,162,39,0.3);
+    padding: 40px 0 20px;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 12px; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .header-nav { display: none; }
+    .header-contacts .btn-red { display: none; }
+    .header-phone { font-size: 15px; }
+    .cert-inner { flex-direction: column; align-items: center; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-links { flex-direction: column; gap: 10px; }
+  }
+</style>
+
 <!-- ===== JS: STICKY HEADER ===== -->
 <script>
-  // Sticky header
+  // ── Sticky header ──────────────────────────────────────
   const header = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // FAQ accordion
+  // ── FAQ accordion ──────────────────────────────────────
   function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const isOpen = btn.classList.contains('open');
@@ -1446,6 +1988,168 @@
       answer.classList.add('open');
     }
   }
+
+  // ── Marquiz ────────────────────────────────────────────
+  const mqAnswers = {};
+  function mqNext(step, answer) {
+    mqAnswers['step' + step] = answer;
+    const nextStep = step + 1;
+    document.getElementById('mqStep' + step).classList.remove('active');
+    const nextEl = step < 3
+      ? document.getElementById('mqStep' + nextStep)
+      : document.getElementById('mqResult');
+    if (nextEl) nextEl.classList.add('active');
+    const pct = step < 3 ? ((step + 1) / 3 * 100) : 100;
+    document.getElementById('mqProgress').style.width = pct + '%';
+    if (step < 3) {
+      document.getElementById('mqCurrent').textContent = nextStep;
+    }
+  }
+
+  // ── Phone mask ─────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.querySelector('input[name="phone"]');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function () {
+        let v = this.value.replace(/\D/g, '');
+        if (v.startsWith('8')) v = '7' + v.slice(1);
+        if (!v.startsWith('7')) v = '7' + v;
+        v = v.slice(0, 11);
+        let formatted = '+7';
+        if (v.length > 1) formatted += ' (' + v.slice(1, 4);
+        if (v.length >= 4) formatted += ') ' + v.slice(4, 7);
+        if (v.length >= 7) formatted += '-' + v.slice(7, 9);
+        if (v.length >= 9) formatted += '-' + v.slice(9, 11);
+        this.value = formatted;
+      });
+    }
+
+    // Passport mask
+    const passportInput = document.querySelector('input[name="passport"]');
+    if (passportInput) {
+      passportInput.addEventListener('input', function () {
+        let v = this.value.replace(/\D/g, '').slice(0, 10);
+        if (v.length > 4) v = v.slice(0, 4) + ' ' + v.slice(4);
+        this.value = v;
+      });
+    }
+
+    // Digits-only for ogrn & okpo
+    ['ogrn', 'okpo'].forEach(name => {
+      const el = document.querySelector('input[name="' + name + '"]');
+      if (el) {
+        el.addEventListener('input', function () {
+          this.value = this.value.replace(/\D/g, '');
+        });
+      }
+    });
+  });
+
+  // ── Form validation ────────────────────────────────────
+  function showError(id, msg) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = msg;
+  }
+  function clearErrors() {
+    document.querySelectorAll('.form-error').forEach(e => e.textContent = '');
+    document.querySelectorAll('.form-input.invalid').forEach(e => e.classList.remove('invalid'));
+  }
+  function markInvalid(name) {
+    const el = document.querySelector('[name="' + name + '"]');
+    if (el) el.classList.add('invalid');
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    clearErrors();
+    const f = e.target;
+    let valid = true;
+
+    const name = f.name.value.trim();
+    if (!name || name.length < 2) {
+      showError('err-name', 'Введите имя (минимум 2 символа)');
+      markInvalid('name'); valid = false;
+    }
+
+    const lastname = f.lastname.value.trim();
+    if (!lastname || lastname.length < 2) {
+      showError('err-lastname', 'Введите фамилию (минимум 2 символа)');
+      markInvalid('lastname'); valid = false;
+    }
+
+    const phone = f.phone.value.trim();
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 11) {
+      showError('err-phone', 'Введите корректный номер телефона');
+      markInvalid('phone'); valid = false;
+    }
+
+    const email = f.email.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('err-email', 'Введите корректный email');
+      markInvalid('email'); valid = false;
+    }
+
+    const city = f.city.value.trim();
+    if (!city || city.length < 2) {
+      showError('err-city', 'Введите город');
+      markInvalid('city'); valid = false;
+    }
+
+    const birthdate = f.birthdate.value;
+    if (!birthdate) {
+      showError('err-birthdate', 'Укажите дату рождения');
+      markInvalid('birthdate'); valid = false;
+    } else {
+      const age = new Date().getFullYear() - new Date(birthdate).getFullYear();
+      if (age < 18 || age > 60) {
+        showError('err-birthdate', 'Возраст должен быть от 18 до 60 лет');
+        markInvalid('birthdate'); valid = false;
+      }
+    }
+
+    const passport = f.passport.value.replace(/\s/g, '');
+    if (passport.length !== 10 || !/^\d{10}$/.test(passport)) {
+      showError('err-passport', 'Введите серию (4 цифры) и номер (6 цифр) паспорта');
+      markInvalid('passport'); valid = false;
+    }
+
+    const ogrn = f.ogrn.value.trim();
+    if (!ogrn || ogrn.length !== 19 || !/^\d{19}$/.test(ogrn)) {
+      showError('err-ogrn', 'ОГРН должен содержать ровно 19 цифр');
+      markInvalid('ogrn'); valid = false;
+    }
+
+    const okpo = f.okpo.value.trim();
+    if (!okpo || okpo.length !== 14 || !/^\d{14}$/.test(okpo)) {
+      showError('err-okpo', 'ОКПО должен содержать ровно 14 цифр');
+      markInvalid('okpo'); valid = false;
+    }
+
+    const military = f.military.value;
+    if (!military) {
+      showError('err-military', 'Выберите один из вариантов');
+      markInvalid('military'); valid = false;
+    }
+
+    if (!f.agree.checked) {
+      showError('err-agree', 'Необходимо согласие на обработку данных');
+      valid = false;
+    }
+
+    if (valid) {
+      document.getElementById('formSuccess').style.display = 'block';
+      f.reset();
+      f.querySelector('.form-submit').disabled = true;
+      f.querySelector('.form-submit').textContent = 'ЗАЯВКА ОТПРАВЛЕНА ✓';
+      setTimeout(() => {
+        f.querySelector('.form-submit').disabled = false;
+        f.querySelector('.form-submit').textContent = 'ОТПРАВИТЬ ЗАЯВКУ';
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 6000);
+    }
+  }
 </script>
+
 </body>
 </html>
