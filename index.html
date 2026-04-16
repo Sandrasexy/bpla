@@ -362,13 +362,16 @@ input,select,textarea{font-family:inherit}
 .how-ttl{font-family:'Oswald',sans-serif;font-size:clamp(20px,2.8vw,30px);font-weight:700;color:var(--blue);font-style:italic;line-height:1.3;max-width:680px}
 .how-emblem{width:100px;flex-shrink:0;opacity:.85}
 /* Таймлайн */
-.tl-row{display:flex;align-items:flex-start;justify-content:space-between;position:relative;margin-bottom:8px}
-.tl-row::before{content:'';position:absolute;top:37px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
-.tl-item{flex:1;text-align:center;position:relative;z-index:1}
-.tl-circle{width:74px;height:74px;border-radius:50%;border:3px solid var(--blue);background:#f8f9fa;display:flex;align-items:center;justify-content:center;margin:0 auto;font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--blue)}
-.tl-arr-d{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid var(--blue);margin:5px auto 0}
-.tl-arr-u{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:10px solid var(--blue);margin:0 auto 5px}
-.tl-desc{font-size:14px;color:#555;line-height:1.5;max-width:140px;margin:5px auto 0}
+.tl-row1,.tl-row2{display:flex;align-items:flex-start;justify-content:space-between;position:relative;margin-bottom:8px}
+.tl-row1::before{content:'';position:absolute;top:142px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
+.tl-row2::before{content:'';position:absolute;top:52px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
+.tl-item{flex:1;text-align:center;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.tl-top{min-height:90px;display:flex;align-items:flex-end;padding-bottom:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:center}
+.tl-bot{min-height:80px;display:flex;align-items:flex-start;padding-top:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:center}
+.tl-circle{width:74px;height:74px;border-radius:50%;border:3px solid var(--blue);background:#f8f9fa;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--blue)}
+.tl-arr-d{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid var(--blue);margin:5px auto}
+.tl-arr-u{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:10px solid var(--blue);margin:5px auto}
+.tl-sp{height:20px}/* spacer = same height as arrow+margin, keeps circles aligned */
 .tl-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
 .tl-box{border:1px solid #ddd;border-radius:6px;padding:16px 18px;font-size:14px;color:#555;line-height:1.65}
 /* Программа */
@@ -389,24 +392,76 @@ input,select,textarea{font-family:inherit}
       <h2 class="how-ttl">Как проходит обучение на оператора БПЛА и устройство на контрактную службу</h2>
       <img class="how-emblem" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Emblem_of_the_Russian_Armed_Forces.svg/200px-Emblem_of_the_Russian_Armed_Forces.svg.png" alt="МО РФ" onerror="this.style.display='none'"/>
     </div>
-    <!-- Ряд 1: шаги 1-4 -->
-    <div class="tl-row">
-      <div class="tl-item"><div class="tl-circle">1</div><div class="tl-arr-d"></div></div>
-      <div class="tl-item"><div class="tl-circle">2</div><div class="tl-arr-d"></div><div class="tl-desc">Мы связываемся с вами для уточнения всех деталей</div></div>
-      <div class="tl-item"><div class="tl-circle">3</div><div class="tl-arr-d"></div></div>
-      <div class="tl-item"><div class="tl-circle">4</div><div class="tl-arr-d"></div><div class="tl-desc">Согласовываем вашу кандидатуру с Министерством Обороны РФ</div></div>
+    <!-- Ряд 1: шаги 1-4 (нечётные — текст сверху, чётные — снизу) -->
+    <div class="tl-row1">
+      <!-- 1: текст сверху, стрелка вверх -->
+      <div class="tl-item">
+        <div class="tl-top">Оставляете заявку на сайте или звоните по номеру 8 800 333 26 15</div>
+        <div class="tl-arr-u"></div>
+        <div class="tl-circle">1</div>
+        <div class="tl-sp"></div>
+        <div class="tl-bot"></div>
+      </div>
+      <!-- 2: текст снизу, стрелка вниз -->
+      <div class="tl-item">
+        <div class="tl-top"></div>
+        <div class="tl-sp"></div>
+        <div class="tl-circle">2</div>
+        <div class="tl-arr-d"></div>
+        <div class="tl-bot">Мы связываемся с вами для уточнения всех деталей</div>
+      </div>
+      <!-- 3: текст сверху, стрелка вверх -->
+      <div class="tl-item">
+        <div class="tl-top">Отправляем обязательную анкету для заполнения</div>
+        <div class="tl-arr-u"></div>
+        <div class="tl-circle">3</div>
+        <div class="tl-sp"></div>
+        <div class="tl-bot"></div>
+      </div>
+      <!-- 4: текст снизу, стрелка вниз -->
+      <div class="tl-item">
+        <div class="tl-top"></div>
+        <div class="tl-sp"></div>
+        <div class="tl-circle">4</div>
+        <div class="tl-arr-d"></div>
+        <div class="tl-bot">Согласовываем вашу кандидатуру с Министерством Обороны РФ</div>
+      </div>
     </div>
-    <!-- Блоки между рядами -->
+    <!-- Блоки между рядами (метки для шагов 5 и 7) -->
     <div class="tl-boxes">
       <div class="tl-box">В случае положительного решения организуем ваш приезд в Центр подготовки операторов БПЛА и разместим в комфортабельной гостинице</div>
-      <div class="tl-box">После прохождения обучения, сдачи экзаменов и получения сертификата оказываем содействие в подписании контракта с Министерством Обороны РФ</div>
+      <div class="tl-box">После прохождения обучения, сдачи экзаменов и получения сертификата мы оказываем вам содействие в подписании контракта с Министерством Обороны РФ</div>
     </div>
-    <!-- Ряд 2: шаги 5-8 -->
-    <div class="tl-row">
-      <div class="tl-item"><div class="tl-arr-u"></div><div class="tl-circle">5</div></div>
-      <div class="tl-item"><div class="tl-arr-u"></div><div class="tl-circle">6</div><div class="tl-desc" style="margin-top:8px">Вы подписываете договор на прохождение обучения в Центре БПЛА</div></div>
-      <div class="tl-item"><div class="tl-arr-u"></div><div class="tl-circle">7</div></div>
-      <div class="tl-item"><div class="tl-arr-u"></div><div class="tl-circle">8</div><div class="tl-desc" style="margin-top:8px">После подписания контракта убываете в воинскую часть БПЛА</div></div>
+    <!-- Ряд 2: шаги 5-8 (5,7 — стрелка вверх к блоку, 6,8 — текст снизу) -->
+    <div class="tl-row2">
+      <!-- 5: стрелка вверх к блоку -->
+      <div class="tl-item">
+        <div class="tl-arr-u"></div>
+        <div class="tl-circle">5</div>
+        <div class="tl-sp"></div>
+        <div class="tl-bot"></div>
+      </div>
+      <!-- 6: текст снизу, стрелка вниз -->
+      <div class="tl-item">
+        <div class="tl-sp"></div>
+        <div class="tl-circle">6</div>
+        <div class="tl-arr-d"></div>
+        <div class="tl-bot">Вы подписываете договор на прохождение обучения в Центре БПЛА</div>
+      </div>
+      <!-- 7: стрелка вверх к блоку -->
+      <div class="tl-item">
+        <div class="tl-arr-u"></div>
+        <div class="tl-circle">7</div>
+        <div class="tl-sp"></div>
+        <div class="tl-bot"></div>
+      </div>
+      <!-- 8: текст снизу, стрелка вниз -->
+      <div class="tl-item">
+        <div class="tl-sp"></div>
+        <div class="tl-circle">8</div>
+        <div class="tl-arr-d"></div>
+        <div class="tl-bot">После подписания контракта убываете в воинскую часть для дальнейшего прохождения службы в подразделении БПЛА</div>
+      </div>
     </div>
   </div>
 </div>
