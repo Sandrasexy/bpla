@@ -881,6 +881,130 @@ input,select,textarea{font-family:inherit}
 </footer>
 
 <!-- ══ ФОРМА ДЛЯ ОРГАНИЗАЦИЙ (под футером) ══ -->
+<!-- ══ ОТЗЫВЫ ══ -->
+<section id="reviews">
+<style>
+.rev-sec{background:#f8f9fa;padding:70px 0}
+.rev-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);text-transform:uppercase;font-style:italic;margin-bottom:44px}
+.rev-item{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);padding:32px 36px;display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:flex-start;margin-bottom:24px}
+@media(max-width:680px){.rev-item{grid-template-columns:1fr;padding:24px 20px}}
+.rev-photo{width:160px;height:160px;border-radius:10px;object-fit:cover;display:block}
+@media(max-width:680px){.rev-photo{width:100px;height:100px}}
+.rev-name{font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
+.rev-meta{font-size:14px;color:#888;margin-bottom:14px}
+.rev-text{font-size:15px;color:#444;line-height:1.75;text-align:justify}
+.rev-cta{margin-top:20px}
+.rev-cta a{display:inline-block;background:var(--blue);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:1px;text-transform:uppercase;padding:11px 32px;border-radius:6px;transition:opacity .2s}
+.rev-cta a:hover{opacity:.88}
+</style>
+<div class="rev-sec">
+<div class="wrap">
+  <h2 class="rev-ttl">Отзывы</h2>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=300&h=300&auto=format&fit=crop&q=80" alt="Алексей"/>
+    <div>
+      <div class="rev-name">Алексей К.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-08 &nbsp;|&nbsp; 02.2025</div>
+      <p class="rev-text">Пришёл вообще без опыта — даже квадрокоптером толком не летал. За две недели обучения научился уверенно пилотировать разведывательный БПЛА, читать тепловизор, работать с картой в реальном времени. Инструкторы объясняют доступно, без лишней воды. Теперь в части — оператор своего звена. Выплата пришла вовремя, всё как обещали.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&auto=format&fit=crop&q=80" alt="Дмитрий"/>
+    <div>
+      <div class="rev-name">Дмитрий Р.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-11 &nbsp;|&nbsp; 02.2025</div>
+      <p class="rev-text">Узнал о центре через знакомого. Сначала скептически отнёсся, но решил попробовать. Уже на третий день обучения понял — это серьёзно. Теория плотная, практика каждый день. Отдельное спасибо за то, что помогли с оформлением документов — я не служил, и думал, что откажут. Помогли всё сделать и контракт подписали без проволочек.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300&h=300&auto=format&fit=crop&q=80" alt="Ирина"/>
+    <div>
+      <div class="rev-name">Ирина М.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-23-01 &nbsp;|&nbsp; 03.2025</div>
+      <p class="rev-text">Я — одна из немногих девушек в группе, но никакого особого отношения не было: учили наравне со всеми. Программа насыщенная, но понятная. После сдачи экзамена получила сертификат государственного образца, подписала контракт. Семья поначалу переживала, но социальный пакет и стабильные выплаты успокоили всех. Рекомендую всем, кто ищет реальное дело.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&auto=format&fit=crop&q=80" alt="Сергей"/>
+    <div>
+      <div class="rev-name">Сергей В.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-07 &nbsp;|&nbsp; 01.2025</div>
+      <p class="rev-text">До этого работал водителем-дальнобойщиком. Доход нестабильный, устал от дороги. Друг посоветовал центр — говорит, уедешь с деньгами и профессией. Так и вышло. Единовременная выплата закрыла ипотечный хвост. Теперь служу оператором БПЛА, получаю стабильно, жена довольна. Обучение прошло быстро, инструкторы — профессионалы.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&auto=format&fit=crop&q=80" alt="Павел"/>
+    <div>
+      <div class="rev-name">Павел Н.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-23-02 &nbsp;|&nbsp; 03.2025</div>
+      <p class="rev-text">Проходил срочную ещё в 2015 году, потом — гражданка, работа в стройке. Когда узнал о программе, сомневался: возьмут ли в 38 лет? Взяли. Обучение интенсивное, но грамотно выстроенное. Особенно запомнились занятия по ночной навигации и работе с FPV. Документы оформили быстро, контракт подписан. Выплату получил в срок.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=300&h=300&auto=format&fit=crop&q=80" alt="Николай"/>
+    <div>
+      <div class="rev-name">Николай Т.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-10 &nbsp;|&nbsp; 02.2025</div>
+      <p class="rev-text">Приехал из Новосибирска — оплатили дорогу и разместили в гостинице, как и обещали на сайте. Всё организационно чётко: встретили, оформили, поселили. Обучение — две недели плотной работы. Преподаватели знают предмет, объясняют на практике. Экзамен сдал с первого раза. Сейчас в части, коллектив хороший. Ни разу не пожалел о решении.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=300&h=300&auto=format&fit=crop&q=80" alt="Андрей"/>
+    <div>
+      <div class="rev-name">Андрей Ф.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-23-03 &nbsp;|&nbsp; 04.2025</div>
+      <p class="rev-text">Работал в охране, зарплата небольшая. Увидел рекламу, почитал, позвонил. Менеджер ответил сразу, всё объяснил, записал на собеседование. Через три дня уже был в Петербурге. Обучение серьёзное: теория, тренажёр, реальный БПЛА на полигоне. Понравилось, что инструктор сам участник СВО — рассказывал реальные кейсы. Контракт подписал, выплата пришла.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&auto=format&fit=crop&q=80" alt="Роман"/>
+    <div>
+      <div class="rev-name">Роман Е.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-09 &nbsp;|&nbsp; 01.2025</div>
+      <p class="rev-text">Честно — шёл прежде всего за деньгами. Но в процессе понял, что профессия реально интересная. Управление БПЛА — это техника, тактика, работа с данными. Не просто «полетать». Курс структурирован хорошо, нет ощущения хаоса. Сертификат дал уверенность перед контрактом. Сейчас отслужил первые три месяца — всё стабильно, выплаты приходят.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&auto=format&fit=crop&q=80" alt="Светлана"/>
+    <div>
+      <div class="rev-name">Светлана Д.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-23-01 &nbsp;|&nbsp; 03.2025</div>
+      <p class="rev-text">Муж уже служит по контракту, я решила тоже не сидеть в стороне. Узнала про центр от него. Обучение прошло быстро и интенсивно. Особенно понравились занятия по обработке видеоданных с БПЛА — это аналитика, а не просто пилотирование. Сейчас работаю оператором разведки. Условия достойные, семья рядом, помогли с жильём на первые месяцы.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+  <div class="rev-item">
+    <img class="rev-photo" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=300&h=300&auto=format&fit=crop&q=80" alt="Максим"/>
+    <div>
+      <div class="rev-name">Максим О.</div>
+      <div class="rev-meta">Выпускник группы БПЛ-22-12 &nbsp;|&nbsp; 02.2025</div>
+      <p class="rev-text">Закончил технический колледж, до этого ни дня не служил. Боялся, что не справлюсь с физической частью подготовки — но нас готовили прежде всего как операторов, а не пехоту. Программа чётко заточена под задачи. За две недели дали всё необходимое: от базовой тактики до уверенного пилотирования. Сейчас горжусь тем, что освоил реальную боевую специальность.</p>
+      <div class="rev-cta"><a href="#form">Оставить заявку</a></div>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
 <section id="org-form">
 <style>
 .orgf{background:#f2f3f5;padding:50px 0;border-top:1px solid #e0e0e0}
