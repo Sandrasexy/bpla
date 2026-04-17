@@ -1127,11 +1127,10 @@ function orgSubmit(ev){
 </script>
 
 <!-- ══ КУКИ-БАННЕР ══ -->
-<div id="cookie-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;color:#fff;font-size:14px;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center">
-  <span>Мы используем файлы cookie для корректной работы сайта и улучшения качества обслуживания.
-    <a href="#" onclick="openDoc('policy');return false" style="color:#aac4ff;text-decoration:underline">Политика конфиденциальности</a>
-  </span>
-  <button onclick="acceptCookies()" style="background:var(--blue);color:#fff;border:none;border-radius:4px;padding:8px 28px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap">ОК</button>
+<div id="cookie-bar" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;background:#fff;border:1px solid #ddd;border-radius:40px;box-shadow:0 2px 12px rgba(0,0,0,.12);padding:10px 18px;display:none;align-items:center;gap:10px;white-space:nowrap;font-size:14px;color:#555">
+  Используем куки.
+  <a href="#" onclick="openDoc('policy');return false" style="color:var(--blue);text-decoration:underline">Подробнее</a>
+  <button onclick="acceptCookies()" style="background:var(--blue);color:#fff;border:none;border-radius:20px;padding:5px 18px;font-size:13px;font-weight:600;cursor:pointer">ОК</button>
 </div>
 
 <!-- ══ МОДАЛЬНЫЕ ОКНА (Политика / Согласие / Соглашение) ══ -->
@@ -1143,8 +1142,7 @@ function orgSubmit(ev){
 </div>
 
 <style>
-#cookie-bar{display:none}
-#cookie-bar.show{display:flex}
+#cookie-bar.show{display:flex!important}
 </style>
 
 <script>
