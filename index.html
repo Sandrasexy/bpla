@@ -769,7 +769,10 @@ input,select,textarea{font-family:inherit}
 /* Форма */
 .form-ttl{font-family:'Oswald',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--blue);font-style:italic;line-height:1.25;margin-bottom:36px}
 .form-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-@media(max-width:860px){.form-layout{grid-template-columns:1fr;gap:32px}}
+@media(max-width:860px){
+  .form-layout{grid-template-columns:1fr;gap:0}
+  .form-layout>div:first-child{padding-bottom:32px;border-bottom:2px solid #e0e0e0;margin-bottom:32px}
+}
 .form-info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
 .form-lbl{font-size:14px;color:#888;margin-bottom:2px}
 .form-val{font-size:14px;color:#1a1a1a;font-weight:500}
