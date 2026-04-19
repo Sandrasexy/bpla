@@ -83,10 +83,10 @@ input,select,textarea{font-family:inherit}
 .hero{
   background:#fff;
   padding-top:80px;
-  display:flex;align-items:stretch;
+  display:flex;align-items:stretch;overflow:visible;
 }
 .hero-inner{
-  max-width:1400px;margin:0 auto;padding:40px 20px 40px;
+  max-width:100%;margin:0 auto;padding:40px 60px 0;
   display:grid;grid-template-columns:1fr 1fr;
   gap:20px;align-items:flex-end;width:100%;
 }
@@ -114,11 +114,12 @@ input,select,textarea{font-family:inherit}
 .hero-right{
   position:relative;
   display:flex;align-items:flex-end;justify-content:center;
-  min-height:460px;
+  min-height:520px;
 }
 .hero-img{
-  width:100%;max-width:520px;
+  width:100%;max-width:640px;
   object-fit:contain;object-position:bottom;display:block;
+  margin-bottom:-4px;/* прилипает к следующей секции */
 }
 .hero-badge{
   position:absolute;top:80px;right:0;
