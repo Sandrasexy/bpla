@@ -83,51 +83,51 @@ input,select,textarea{font-family:inherit}
 .hero{
   background:#fff;
   padding-top:80px;
-  display:flex;align-items:stretch;overflow:visible;
+  display:flex;align-items:stretch;
 }
 .hero-inner{
-  max-width:100%;margin:0 auto;padding:40px 60px 0;
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:20px;align-items:flex-end;width:100%;
+  max-width:100%;margin:0 auto;padding:50px 60px 60px;
+  display:grid;grid-template-columns:55fr 45fr;
+  gap:40px;align-items:flex-end;width:100%;
 }
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:40px 20px 0}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:40px 20px 40px}}
 .hero-title{
   font-family:'Oswald',sans-serif;font-weight:700;
-  font-size:clamp(52px,7.5vw,92px);line-height:1.05;
+  font-size:clamp(52px,7vw,96px);line-height:1;
+  letter-spacing:2px;
   text-transform:uppercase;margin-bottom:28px;
 }
 .t-red{color:var(--red)}
 .t-blue{color:var(--blue)}
-.hero-nums{margin-bottom:32px}
-.hero-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.hero-nums{margin-bottom:36px}
+.hero-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
 .hero-lbl{font-size:18px;color:#333;font-weight:400}
 .hero-val{
   font-family:'Oswald',sans-serif;font-weight:700;
-  font-size:clamp(38px,5vw,62px);color:var(--red);line-height:1;
+  font-size:clamp(42px,5.5vw,72px);color:var(--red);line-height:1;
 }
-.hero-unit{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:#333}
-.hero-caption{font-size:15px;color:#333;margin-bottom:14px}
+.hero-unit{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#333}
+.hero-caption{font-size:16px;color:#333;margin-bottom:16px;font-weight:500}
 .hero-caption strong{font-weight:700}
-.hero-cta{margin-top:4px}
-.hero-cta .btn-red{font-size:20px;padding:17px 80px;border-radius:6px}
+.hero-cta{margin-top:8px}
+.hero-cta .btn-red{font-size:20px;padding:18px 80px;border-radius:6px;letter-spacing:2px}
 /* Правая колонка */
 .hero-right{
   position:relative;
   display:flex;align-items:flex-end;justify-content:center;
-  min-height:520px;
+  min-height:500px;
 }
 .hero-img{
-  width:100%;max-width:640px;
+  width:100%;max-width:660px;
   object-fit:contain;object-position:bottom;display:block;
-  margin-bottom:-4px;/* прилипает к следующей секции */
 }
 .hero-badge{
-  position:absolute;top:80px;right:0;
+  position:absolute;top:0;right:0;
   background:var(--blue);color:#fff;
   font-size:14px;line-height:1.5;
-  padding:14px 18px;border-radius:4px;max-width:200px;
+  padding:14px 18px;border-radius:6px;max-width:200px;
 }
-@media(max-width:900px){.hero-right{min-height:280px}}
+@media(max-width:900px){.hero-right{min-height:300px}}
 
 /* ════════════════════
    URGENCY BAR
