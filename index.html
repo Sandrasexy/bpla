@@ -84,10 +84,11 @@ input,select,textarea{font-family:inherit}
   display:flex;align-items:stretch;
 }
 .hero-inner{
-  max-width:100%;margin:0 auto;padding:50px 60px 60px;
+  max-width:100%;margin:0 auto;padding:50px 60px 60px 60px;
   display:grid;grid-template-columns:65fr 35fr;
   gap:40px;align-items:flex-end;width:100%;
 }
+.hero-inner>*:first-child{padding-left:5%}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:40px 20px 40px}}
 .hero-title{
   font-family:'Oswald',sans-serif;font-weight:700;
