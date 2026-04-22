@@ -154,7 +154,7 @@ input,select,textarea{font-family:inherit}
     </nav>
     <div class="hdr-right">
       <div class="hdr-phone">
-        <a href="tel:+78003332615">8 800 333 26 15</a>
+        <a href="tel:+78003029585">8 (800) 302-95-85</a>
         <small>Звонок бесплатный</small>
       </div>
       <a href="#" onclick="openLeadPopup();return false" class="btn-red hdr-btn">ХОЧУ В БПЛА</a>
@@ -351,18 +351,21 @@ input,select,textarea{font-family:inherit}
 .tl-row1,.tl-row2{display:flex;align-items:flex-start;justify-content:space-between;position:relative;margin-bottom:8px}
 .tl-row1::before{content:'';position:absolute;top:142px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
 .tl-row2::before{content:'';position:absolute;top:52px;left:12.5%;right:12.5%;height:2px;background:var(--blue);z-index:0}
-.tl-item{flex:1;text-align:center;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
-.tl-top{min-height:90px;display:flex;align-items:flex-end;padding-bottom:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:center}
-.tl-bot{min-height:80px;display:flex;align-items:flex-start;padding-top:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:center}
+.tl-item{flex:1;text-align:left;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.tl-top{min-height:90px;display:flex;align-items:flex-end;padding-bottom:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:left}
+.tl-bot{min-height:80px;display:flex;align-items:flex-start;padding-top:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:left}
 .tl-circle{width:74px;height:74px;border-radius:50%;border:3px solid var(--blue);background:#f8f9fa;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--blue)}
 .tl-arr-d{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid var(--blue);margin:5px auto}
 .tl-arr-u{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:10px solid var(--blue);margin:5px auto}
-.tl-sp{height:20px}/* spacer = same height as arrow+margin, keeps circles aligned */
+.tl-sp{height:20px}
 .tl-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
 .tl-box{border:1px solid #ddd;border-radius:6px;padding:16px 18px;font-size:14px;color:#555;line-height:1.65}
+/* Ряд 2 — элементы шире */
+.tl-row2 .tl-item{flex:none;width:30%}
+.tl-row2 .tl-bot{max-width:none;width:100%}
 /* Мобильные элементы — на десктопе скрыты */
 .mob-arr-d{display:none}
-.tl-mob-label{display:none;font-size:13px;color:#555;line-height:1.5;text-align:center;max-width:240px;padding-bottom:12px}
+.tl-mob-label{display:none;font-size:13px;color:#555;line-height:1.5;text-align:left;max-width:240px;padding-bottom:12px}
 @media(max-width:680px){
   .tl-row1,.tl-row2{flex-direction:column;align-items:center;gap:0}
   .tl-row1::before,.tl-row2::before{display:none}
@@ -759,18 +762,17 @@ input,select,textarea{font-family:inherit}
       <!-- Левая: адрес, карта, реквизиты -->
       <div>
         <div class="form-info-row">
-          <div><div class="form-lbl">Адрес:</div><div class="form-val">Санкт-Петербург,<br>Республиканская ул., д. 16</div></div>
-          <div><div class="form-lbl">Приём граждан:</div><div class="form-val">ПН – ВС, с 9:00 до 18:00</div></div>
-          <div><div class="form-lbl">Горячая линия:</div><div class="form-val"><a href="tel:+78003332615">8 800 333-26-15</a></div></div>
+          <div><div class="form-lbl">Адрес:</div><div class="form-val">г. Москва,<br>ул. Зорге, д. 27, этаж 3</div></div>
+          <div><div class="form-lbl">Телефон:</div><div class="form-val"><a href="tel:+78003029585">8 (800) 302-95-85</a><br><a href="tel:+74951049995">8 (495) 104-99-95</a></div></div>
+          <div><div class="form-lbl">Email:</div><div class="form-val"><a href="mailto:info@naritdpo.ru">info@naritdpo.ru</a></div></div>
         </div>
         <div class="form-map">
-          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.444200%2C59.939400&z=15&pt=30.444200,59.939400,pm2rdm" loading="lazy" allowfullscreen title="Карта"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.500100%2C55.780200&z=16&pt=37.500100,55.780200,pm2rdm" loading="lazy" allowfullscreen title="Карта"></iframe>
         </div>
         <div class="form-legal">
           <strong>Политика конфиденциальности</strong><br>
-          Общество с ограниченной ответственностью «НК»<br>
-          ИНН: 7840443385<br>
-          ОГРН: 1109847032415
+          ООО «НАРИТ»<br>
+          ИНН: 7720854993
         </div>
       </div>
       <!-- Правая: форма -->
@@ -807,8 +809,7 @@ input,select,textarea{font-family:inherit}
         <a href="#" onclick="openDoc('policy');return false" style="color:var(--blue)">Политика конфиденциальности</a> &nbsp;|&nbsp;
         <a href="#" onclick="openDoc('consent');return false" style="color:var(--blue)">Согласие на обработку ПД</a> &nbsp;|&nbsp;
         <a href="#" onclick="openDoc('terms');return false" style="color:var(--blue)">Пользовательское соглашение</a><br>
-        Общество с ограниченной ответственностью «НК»<br>
-        ИНН: 7840443385 &nbsp;|&nbsp; ОГРН: 1109847032415
+        ООО «НАРИТ» &nbsp;|&nbsp; ИНН: 7720854993
       </div>
       <!-- Логотип ОХТА -->
       <svg width="72" height="72" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
