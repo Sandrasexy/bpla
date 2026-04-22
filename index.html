@@ -153,10 +153,6 @@ input,select,textarea{font-family:inherit}
       <a href="#pay">Доп. выплаты</a>
     </nav>
     <div class="hdr-right">
-      <div class="hdr-phone">
-        <a href="tel:+78003029585">8 (800) 302-95-85</a>
-        <small>Звонок бесплатный</small>
-      </div>
       <a href="#" onclick="openLeadPopup();return false" class="btn-red hdr-btn">ХОЧУ В БПЛА</a>
     </div>
   </div>
@@ -352,8 +348,8 @@ input,select,textarea{font-family:inherit}
 .tl-row1::before{content:'';position:absolute;top:142px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
 .tl-row2::before{content:'';position:absolute;top:52px;left:5%;right:5%;height:2px;background:var(--blue);z-index:0}
 .tl-item{flex:1;text-align:left;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
-.tl-top{min-height:90px;display:flex;align-items:flex-end;padding-bottom:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:left}
-.tl-bot{min-height:80px;display:flex;align-items:flex-start;padding-top:0;font-size:13px;color:#555;line-height:1.5;max-width:140px;text-align:left}
+.tl-top{min-height:90px;display:flex;align-items:flex-end;padding-bottom:0;font-size:15px;color:#555;line-height:1.5;max-width:140px;text-align:left}
+.tl-bot{min-height:80px;display:flex;align-items:flex-start;padding-top:0;font-size:15px;color:#555;line-height:1.5;max-width:140px;text-align:left}
 .tl-circle{width:74px;height:74px;border-radius:50%;border:3px solid var(--blue);background:#f8f9fa;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--blue)}
 .tl-arr-d{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid var(--blue);margin:5px auto}
 .tl-arr-u{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:10px solid var(--blue);margin:5px auto}
@@ -365,7 +361,7 @@ input,select,textarea{font-family:inherit}
 .tl-row2 .tl-bot{max-width:none;width:100%}
 /* Мобильные элементы — на десктопе скрыты */
 .mob-arr-d{display:none}
-.tl-mob-label{display:none;font-size:13px;color:#555;line-height:1.5;text-align:left;max-width:240px;padding-bottom:12px}
+.tl-mob-label{display:none;font-size:15px;color:#555;line-height:1.5;text-align:left;max-width:240px;padding-bottom:12px}
 @media(max-width:680px){
   .tl-row1,.tl-row2{flex-direction:column;align-items:center;gap:0}
   .tl-row1::before,.tl-row2::before{display:none}
@@ -439,7 +435,7 @@ input,select,textarea{font-family:inherit}
     <!-- Ряд 2: шаги 5-6-7, все тексты снизу, центрованы -->
     <div class="tl-row2" style="justify-content:space-between;gap:0">
       <!-- 5: текст снизу -->
-      <div class="tl-item" style="max-width:30%">
+      <div class="tl-item" style="max-width:30%;margin-left:10%">
         <div class="tl-sp"></div>
         <div class="tl-circle">5</div>
         <div class="tl-arr-d"></div>
@@ -455,7 +451,7 @@ input,select,textarea{font-family:inherit}
         <div class="tl-mob-label">Оказываем вам содействие в подписании контракта с Министерством Обороны РФ</div>
       </div>
       <!-- 7: текст снизу -->
-      <div class="tl-item" style="max-width:30%">
+      <div class="tl-item" style="max-width:30%;margin-right:10%">
         <div class="tl-sp"></div>
         <div class="tl-circle">7</div>
         <div class="tl-arr-d"></div>
@@ -1131,11 +1127,7 @@ function doSubmit(ev){
   if(!f.name.value.trim()||f.name.value.trim().length<2)inv('name','en','Введите имя');
   if(f.phone.value.replace(/\D/g,'').length<11)inv('phone','ep','Введите корректный телефон');
   if(ok){
-    document.getElementById('fok').style.display='block';
-    const btn=f.querySelector('[type=submit]');
-    btn.disabled=true;btn.textContent='ЗАЯВКА ОТПРАВЛЕНА ✓';
-    f.reset();
-    setTimeout(()=>{btn.disabled=false;btn.textContent='Отправить';document.getElementById('fok').style.display='none'},6000);
+    window.location.href='/thanks';
   }
 }
 
@@ -1185,12 +1177,7 @@ function orgSubmit(ev){
   if(!f.org_ogrn.value||f.org_ogrn.value.length!==19)err('[name=org_ogrn]','ofe-ogrn','ОГРН — ровно 19 цифр');
   if(!f.org_okpo.value||f.org_okpo.value.length!==14)err('[name=org_okpo]','ofe-okpo','ОКПО — ровно 14 цифр');
   if(ok){
-    const ok_el=document.getElementById('orgfOk');
-    const btn=f.querySelector('[type=submit]');
-    ok_el.style.display='block';
-    btn.disabled=true;btn.textContent='Отправлено ✓';
-    f.reset();document.getElementById('orgFileName').textContent='Файл не выбран';
-    setTimeout(()=>{btn.disabled=false;btn.textContent='Отправить заявку';ok_el.style.display='none'},6000);
+    window.location.href='/thanks3';
   }
 }
 </script>
@@ -1220,7 +1207,7 @@ const DOCS = {
   policy: {
     title: 'Политика конфиденциальности',
     html: `<h2 style="font-family:'Oswald',sans-serif;color:#1929B3;margin-bottom:18px">Политика конфиденциальности</h2>
-<p><strong>ООО «НК»</strong> (ИНН 7840443385, ОГРН 1109847032415), далее — «Оператор», настоящим определяет порядок обработки и защиты персональных данных пользователей сайта <strong>bpla-svo.online</strong>.</p>
+<p><strong>ООО «НАРИТ»</strong> (ИНН 7720854993), далее — «Оператор», настоящим определяет порядок обработки и защиты персональных данных пользователей сайта <strong>bpla-svo.online</strong>.</p>
 <h3 style="margin:20px 0 8px">1. Какие данные мы собираем</h3>
 <p>Имя, номер телефона, адрес электронной почты, а также данные о браузере и устройстве (cookies, IP-адрес), вводимые пользователем в формах сайта или автоматически фиксируемые при посещении.</p>
 <h3 style="margin:20px 0 8px">2. Цели обработки</h3>
@@ -1240,7 +1227,7 @@ const DOCS = {
   consent: {
     title: 'Согласие на обработку персональных данных',
     html: `<h2 style="font-family:'Oswald',sans-serif;color:#1929B3;margin-bottom:18px">Согласие на обработку персональных данных</h2>
-<p>Настоящим я, субъект персональных данных, в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных», даю своё свободное, конкретное, информированное и сознательное согласие <strong>ООО «НК»</strong> (ИНН 7840443385) на обработку следующих моих персональных данных:</p>
+<p>Настоящим я, субъект персональных данных, в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных», даю своё свободное, конкретное, информированное и сознательное согласие <strong>ООО «НАРИТ»</strong> (ИНН 7720854993) на обработку следующих моих персональных данных:</p>
 <ul style="margin:12px 0 12px 20px;line-height:2">
   <li>фамилия, имя, отчество;</li>
   <li>номер мобильного телефона;</li>
@@ -1255,7 +1242,7 @@ const DOCS = {
   terms: {
     title: 'Пользовательское соглашение',
     html: `<h2 style="font-family:'Oswald',sans-serif;color:#1929B3;margin-bottom:18px">Пользовательское соглашение</h2>
-<p>Настоящее Пользовательское соглашение (далее — Соглашение) регулирует отношения между <strong>ООО «НК»</strong> (ИНН 7840443385, ОГРН 1109847032415), далее — «Компания», и любым лицом, получающим доступ к сайту <strong>bpla-svo.online</strong> (далее — «Пользователь»).</p>
+<p>Настоящее Пользовательское соглашение (далее — Соглашение) регулирует отношения между <strong>ООО «НАРИТ»</strong> (ИНН 7720854993), далее — «Компания», и любым лицом, получающим доступ к сайту <strong>bpla-svo.online</strong> (далее — «Пользователь»).</p>
 <h3 style="margin:20px 0 8px">1. Предмет Соглашения</h3>
 <p>Компания предоставляет Пользователю доступ к информационным материалам сайта и форме подачи заявки на участие в образовательных программах Центра БПЛА .</p>
 <h3 style="margin:20px 0 8px">2. Права и обязанности Пользователя</h3>
@@ -1321,9 +1308,7 @@ function popupSubmit(ev){
   if(name.length<2){err.textContent='Введите имя';return;}
   if(phone.length<11){err.textContent='Введите корректный телефон';return;}
   err.textContent='';
-  document.getElementById('popup-form-wrap').style.display='none';
-  document.getElementById('popup-ok').style.display='block';
-  setTimeout(closePopup,4000);
+  window.location.href='/thanks';
 }
 /* маска телефона в попапе */
 document.addEventListener('DOMContentLoaded',function(){
