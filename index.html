@@ -382,15 +382,15 @@ input,select,textarea{font-family:inherit}
 .tl-row2 .tl-bot{max-width:none;width:100%}
 /* Мобильные элементы — на десктопе скрыты */
 .mob-arr-d{display:none}
-.tl-mob-label{display:none;font-size:15px;color:#555;line-height:1.5;text-align:left;max-width:240px;padding-bottom:12px}
+.tl-mob-label{display:none;font-size:15px;color:#555;line-height:1.5;text-align:center;max-width:240px;padding-bottom:12px}
 @media(max-width:680px){
   .tl-row1,.tl-row2{flex-direction:column;align-items:center;gap:0}
   .tl-row1::before,.tl-row2::before{display:none}
-  .tl-item{flex:none;width:100%;max-width:300px;align-items:center}
+  .tl-item{flex:none;width:90%;max-width:90%;align-items:center}
   .tl-top,.tl-arr-u,.tl-sp,.tl-bot{display:none}
   .tl-arr-d{display:block}
   .mob-arr-d{display:block}
-  .tl-mob-label{display:block}
+  .tl-mob-label{display:block;width:90%;max-width:none;text-align:center}
   .tl-boxes{display:none}/* тексты шагов 5 и 7 переехали в tl-mob-label внутри item */
 }
 /* Программа */
